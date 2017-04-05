@@ -8,6 +8,8 @@ linter-flake8 \
 autocomplete-python \
 symbols-tree-view \
 last-cursor-position \
+open-recent \
+highlight-selected \
 "
 
 PY_PACKAGES="\
