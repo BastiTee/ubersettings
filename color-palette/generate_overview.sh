@@ -24,7 +24,7 @@ cat _colors.txt | grep -v -e "^$" | while read line; do
     HEX="$( echo "obase=16; $R" | bc )$( echo "obase=16; $G" | bc )$( echo "obase=16; $B" | bc )"
     SVG_FILE="${HEX}_${LOCAL_UID}.svg"
     echo "Processing: $line --> $HEX"
-    echo "| $LABEL | $R $G $B | $HEX | ![](https://cdn.rawgit.com/BastiTee/bastis-ubersettings/master/color-palette/${SVG_FILE}) |" >> $CCM 
+    echo "| $LABEL | $R $G $B | $HEX | ![](https://cdn.rawgit.com/BastiTee/ubersettings/master/color-palette/${SVG_FILE}) |" >> $CCM 
     echo -e "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"$FRAME\" height=\"$FRAME\" >\n<rect  width=\"$SIZE\" height=\"$SIZE\" fill=\"~~~COLOR~~~\" stroke=\"black\" stroke-width=\"1\" /></svg>\n" | sed -e "s/~~~COLOR~~~/#${HEX}/" > ${SVG_FILE}
 done
 
