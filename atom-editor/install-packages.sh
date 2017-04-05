@@ -6,6 +6,8 @@ sort-lines \
 linter \
 linter-flake8 \
 autocomplete-python \
+symbols-tree-view \
+last-cursor-position \
 "
 
 PY_PACKAGES="\
