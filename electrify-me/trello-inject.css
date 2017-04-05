@@ -1,0 +1,11 @@
+.js-add-list.list-wrapper.mod-add.is-idle {
+    display: none;
+}
+
+#header {
+    background: #4C4A48 !important;
+}
+
+.board-wrapper {
+    background-color: #696969;
+}

@@ -1,0 +1,30 @@
+; BASTI's .GITCONFIG
+; ==================
+; Reminder: Don't use global user, when using multiple git accounts
+
+[push]
+	default = matching
+
+[core]
+	trustctime = false
+	filemode = false
+	autocrlf = false
+	editor = vim
+	excludesfile = ~/.gitignore
+
+[http]
+	sslverify = false
+
+[color]
+	ui = true
+
+[credential]
+	helper = cache --timeout=3600
+
+[alias]
+	cp = cherry-pick
+	co = checkout
+	cl = clone
+	ci = commit
+	st = status -sb
+	br = branch

@@ -1,0 +1,9 @@
+'.source.gfm':
+    'bash':
+        'prefix': 'bash'
+        'body': '```bash\nbasti@home:~\$ $1\n```'
+        'description': 'Insert a code-snippet with bash syntax.'
+    'shell':
+            'prefix': 'shell'
+            'body': '```shell\n#!/bin/bash\n\n$1\n```'
+            'description': 'Insert a code-snippet with shell syntax.'

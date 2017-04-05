@@ -1,0 +1,33 @@
+# You can re-read the inputrc file with C-x C-r.
+
+# Be 8 bit clean.
+# To allow the use of 8bit-characters like the german umlauts, uncomment
+# the line below. However this makes the meta key not work as a meta key,
+# which is annoying to those which don't need to type in 8-bit characters.
+set meta-flag on
+set convert-meta off
+set input-meta on
+set output-meta on
+
+# bash configurations 
+set completion-ignore-case on
+set expand-tilde on
+
+# do not bell on tab-completion
+set bell-style none
+
+# allow the use of the Home/End keys
+"\e[H": beginning-of-line #kvt
+"\e[F": end-of-line #kvt
+
+# allow the use of the Delete/Insert keys
+"\e[3~": delete-char #kvt
+"\e[2~": overwrite-mode #kvt
+
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+"\e[1;5C": forward-word #kvt
+"\e[1;5D": backward-word #kvt
+
+# history navigation 
+"\e[A": history-search-backward #kvt
+"\e[B": history-search-forward #kvt

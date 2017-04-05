@@ -1,2 +1,4 @@
-# ubersettings
-A collection of customizations for my everyday applications
+# bastis-ubersettings
+> A collection of themes and customizations for my everyday applications
+
+---

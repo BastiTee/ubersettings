@@ -1,0 +1,15 @@
+{
+  "url": "https://trello.com/b/cEBcoTqe/scopevisio",
+  "cssFile": "trello-inject.css",
+  "devMode": false,
+  "maximized": true,
+  "hideScrollbars": true,
+  "windowSettings": {
+    "fullscreen": false,
+    "fullscreenable": true,
+    "resizable": true,
+    "movable": false,
+    "frame": false
+  },
+  "faviconUrl": "https://trello.com/favicon.ico"
+}

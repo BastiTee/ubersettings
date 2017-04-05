@@ -1,0 +1,4 @@
+startup_message off
+defscrollback 10000
+# http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html
+caption always "%S | %w | %H |"
