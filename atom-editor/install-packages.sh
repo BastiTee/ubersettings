@@ -25,6 +25,7 @@ symbols-tree-view \
 last-cursor-position \
 open-recent \
 highlight-selected \
+tidy-markdown \
 "
 
 PY_PACKAGES="\
