@@ -40,7 +40,7 @@
   <style name="diff:changed-line" foreground="#FFFFAF"/>
   <style name="diff:location" foreground="#75715e"/>
   <style name="diff:removed-line" foreground="#D78787"/>
-  <style name="draw-spaces" foreground="#383634"/>
+  <style name="draw-spaces" foreground="#313434"/>
   <style name="html:dtd" foreground="#FFFFAF"/>
   <style name="html:tag" foreground="#D78787"/>
   <style name="js:function" foreground="#AFDFDF"/>

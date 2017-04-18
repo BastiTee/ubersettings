@@ -20,8 +20,8 @@ xterm*faceSize: 10
 !--- COLORS -----------------------
 
 ! BLACK
-#define _color0        #262524
-#define _color8        #262524
+#define _color0        #292929
+#define _color8        #292929
 ! RED
 #define _color1        #D78787
 #define _color9        #D78787
@@ -49,7 +49,7 @@ xterm*faceSize: 10
 #define _colorIT       #E2E4E6
 !TXT Normal, Normal, Cursor
 #define _foreground    #E2E4E6
-#define _background    #383634
+#define _background    #313434
 #define _cursorColor   #E2E4E6
 URxvt*color0         : _color0
 URxvt*color1         : _color1
