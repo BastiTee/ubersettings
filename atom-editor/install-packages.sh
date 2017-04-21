@@ -26,6 +26,7 @@ last-cursor-position \
 open-recent \
 highlight-selected \
 tidy-markdown \
+color-picker \
 "
 
 PY_PACKAGES="\
