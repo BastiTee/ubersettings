@@ -27,6 +27,7 @@ open-recent \
 highlight-selected \
 tidy-markdown \
 color-picker \
+minimap \
 "
 
 PY_PACKAGES="\
