@@ -4,6 +4,11 @@
         'body': '```bash\nbasti@home:~\$ $1\n```'
         'description': 'Insert a code-snippet with bash syntax.'
     'shell':
-            'prefix': 'shell'
-            'body': '```shell\n#!/bin/bash\n\n$1\n```'
-            'description': 'Insert a code-snippet with shell syntax.'
+        'prefix': 'shell'
+        'body': '```shell\n#!/bin/bash\n\n$1\n```'
+        'description': 'Insert a code-snippet with shell syntax.'
+'.source.js':
+    'yo':
+        'prefix': 'yo'
+        'body': 'console.log("yo")'
+        'description': 'Insert a boilerplate console log.'
