@@ -28,6 +28,7 @@ highlight-selected \
 tidy-markdown \
 color-picker \
 minimap \
+project-view \
 "
 
 PY_PACKAGES="\
