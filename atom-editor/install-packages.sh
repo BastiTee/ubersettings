@@ -10,8 +10,11 @@
 # -----------------------------------------------------------------------------
 
 SYS_PACKAGES="\
-vim
+vim \
+python3 \
+python3-pip \
 "
+
 ATOM_PACKAGES="\
 atom-beautify \
 sort-lines \
@@ -38,7 +41,7 @@ flake8-docstrings \
 "
 
 sudo apt update && \
-sudo apt install $SYS_PACKAGES
+sudo apt install -y $SYS_PACKAGES
 sudo -H python3 -m pip install $PY_PACKAGES
 
 for tool in atom apm pip3; do
