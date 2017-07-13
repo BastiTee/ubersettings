@@ -15,7 +15,6 @@
       "nord-atom-syntax"
     ]
   editor:
-    showIndentGuide: true
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
