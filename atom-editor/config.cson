@@ -1,0 +1,24 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "spell-check"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "atom-dark-ui"
+      "nord-atom-syntax"
+    ]
+  editor:
+    tabLength: 4
+  "exception-reporting":
+    userId: "218a10be-5595-445a-8933-1589c5dfa630"
+  linter:
+    disabledProviders: [
+      "Flake8"
+    ]
+  welcome:
+    showOnStartup: false
