@@ -3,7 +3,9 @@
     general:
       _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
   core:
+    audioBeep: false
     autoHideMenuBar: true
+    closeDeletedFileTabs: true
     disabledPackages: [
       "spell-check"
     ]
@@ -13,6 +15,9 @@
       "nord-atom-syntax"
     ]
   editor:
+    showIndentGuide: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
     tabLength: 4
   "exception-reporting":
     userId: "218a10be-5595-445a-8933-1589c5dfa630"
