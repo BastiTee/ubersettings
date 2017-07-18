@@ -24,5 +24,7 @@
     disabledProviders: [
       "Flake8"
     ]
+  "linter-ui-default":
+    panelHeight: 81
   welcome:
     showOnStartup: false

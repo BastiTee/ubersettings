@@ -12,3 +12,8 @@
         'prefix': 'yo'
         'body': 'console.log("yo")'
         'description': 'Insert a boilerplate console log.'
+'.source.python':
+    'shebang':
+        'prefix': 'shebang'
+        'body': '#!/usr/bin/env python3\n"""TBD."""\n'
+        'description': 'Insert a boilerplate console log.'
