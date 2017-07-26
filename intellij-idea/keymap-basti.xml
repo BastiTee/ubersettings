@@ -19,11 +19,16 @@
   <action id="EditorScrollDown" />
   <action id="EditorScrollUp" />
   <action id="EditorSelectWord" />
+  <action id="ExpressionTypeInfo" />
+  <action id="FileChooser.TogglePathShowing" />
   <action id="FindPrevious">
     <keyboard-shortcut first-keystroke="shift f3" />
   </action>
   <action id="Forward">
     <keyboard-shortcut first-keystroke="alt right" />
+  </action>
+  <action id="GotoAction">
+    <keyboard-shortcut first-keystroke="shift ctrl p" />
   </action>
   <action id="GotoImplementation">
     <mouse-shortcut keystroke="control alt button1" />
@@ -35,6 +40,9 @@
     <keyboard-shortcut first-keystroke="ctrl up" />
   </action>
   <action id="NextTab" />
+  <action id="ParameterInfo">
+    <keyboard-shortcut first-keystroke="alt p" />
+  </action>
   <action id="PreviousTab" />
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl alt b" />
@@ -43,6 +51,9 @@
     <keyboard-shortcut first-keystroke="ctrl h" />
   </action>
   <action id="SaveAll" />
+  <action id="SearchEverywhere">
+    <keyboard-shortcut first-keystroke="ctrl p" />
+  </action>
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>
