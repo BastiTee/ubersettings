@@ -2,6 +2,8 @@
   "atom-beautify":
     general:
       _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
+    markdown:
+      default_beautifier: "Remark"
   core:
     audioBeep: false
     autoHideMenuBar: true
