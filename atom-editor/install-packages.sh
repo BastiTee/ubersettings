@@ -30,6 +30,7 @@ open-recent \
 highlight-selected \
 color-picker \
 minimap \
+pigments \
 "
 
 PY_PACKAGES="\
