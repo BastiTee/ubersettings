@@ -10,6 +10,7 @@
     closeDeletedFileTabs: true
     disabledPackages: [
       "spell-check"
+      "pigments"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -28,6 +29,8 @@
     ]
   "linter-ui-default":
     panelHeight: 81
+  pigments:
+    notifyReloads: false
   "symbols-tree-view":
     autoToggle: true
   welcome:
