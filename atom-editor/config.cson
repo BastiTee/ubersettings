@@ -28,5 +28,7 @@
     ]
   "linter-ui-default":
     panelHeight: 81
+  "symbols-tree-view":
+    autoToggle: true
   welcome:
     showOnStartup: false
