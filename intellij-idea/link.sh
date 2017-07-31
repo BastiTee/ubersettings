@@ -1,5 +1,6 @@
 cd $( dirname $( readlink -f $0 ))
 ideapath=$( find ~ -maxdepth 1 -iname ".Idea*" | head -n1 )
+echo "--- installing to: $ideapath"
 ../mklinks.sh colortheme-basti-linux.icls ${ideapath}/config/colors
 ../mklinks.sh keymap-basti.xml ${ideapath}/config/keymaps
 ../mklinks.sh codestyle-basti.xml ${ideapath}/config/codestyles

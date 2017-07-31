@@ -5,6 +5,7 @@ function print () {
 }
 
 ideapath=$( find ~ -maxdepth 1 -iname ".Idea*" | head -n1 )
+echo "--- comparing with: $ideapath"
 cd "$( dirname "$( readlink -f "$0" )" )"
 find -type f ! -iname "*.sh" | while read file
 do
