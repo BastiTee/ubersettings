@@ -11,6 +11,7 @@
     disabledPackages: [
       "spell-check"
       "pigments"
+      "whitespace"
     ]
     telemetryConsent: "limited"
     themes: [
