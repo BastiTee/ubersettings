@@ -7,7 +7,9 @@
 -java.lang.Integer
 -java.lang.invoke.*
 -java.lang.Long
+-java.lang.Enum
 -java.lang.Object
+-java.lang.RuntimeException
 -java.lang.ref.*
 -java.net.*
 -java.nio.*
