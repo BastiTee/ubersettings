@@ -4,6 +4,10 @@
 # language-java package in our Settings view and we can see the Scope is
 # source.java [..]
 
+'.source.js':
+    'd3.js - attr':
+        'prefix': 'attr'
+        'body': '.attr("$1", "$2")$3'
 '.source.gfm':
     'Create a bash code-snippet':
         'prefix': 'bash'
