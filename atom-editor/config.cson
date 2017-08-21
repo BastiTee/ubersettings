@@ -28,8 +28,7 @@
     disabledProviders: [
       "Flake8"
     ]
-  "linter-ui-default":
-    panelHeight: 81
+  "linter-ui-default": {}
   pigments:
     notifyReloads: false
   "symbols-tree-view":
