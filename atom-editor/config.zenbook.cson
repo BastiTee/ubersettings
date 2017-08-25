@@ -1,0 +1,39 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
+    markdown:
+      default_beautifier: "Remark"
+  core:
+    audioBeep: false
+    autoHideMenuBar: true
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "spell-check"
+      "pigments"
+      "whitespace"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "atom-dark-ui"
+      "nord-atom-syntax"
+    ]
+  editor:
+    fontSize: 17
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "218a10be-5595-445a-8933-1589c5dfa630"
+  linter:
+    disabledProviders: [
+      "Flake8"
+    ]
+  "linter-ui-default":
+    panelHeight: 81
+  pigments:
+    notifyReloads: false
+  "symbols-tree-view":
+    autoToggle: true
+  welcome:
+    showOnStartup: false
