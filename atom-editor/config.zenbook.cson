@@ -12,6 +12,7 @@
       "spell-check"
       "pigments"
       "whitespace"
+      "tidy-markdown"
     ]
     telemetryConsent: "limited"
     themes: [
