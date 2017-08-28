@@ -30,6 +30,7 @@ highlight-selected \
 color-picker \
 minimap \
 pigments \
+tidy-markdown \
 "
 
 PY_PACKAGES="\
