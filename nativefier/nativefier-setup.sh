@@ -4,8 +4,8 @@ cd "$( dirname "$( readlink -f "$0" )" )"
 rm -rf build
 rm -f ~/.local/share/applications/nativefier_*
 mkdir -vp build
-defaults="--disable-dev-tools -e 1.4.5"
-
+defaults="--disable-dev-tools --disable-context-menu"
+  
 #------------------------------------------------------------------------------
 # HELPER 
 #------------------------------------------------------------------------------
@@ -20,7 +20,6 @@ Type=Application
 Name=$1
 Icon=$( dirname $( readlink -f $2 ) )/resources/app/icon.png
 Exec=$( readlink -f $2 )
-StartupNotify=false
 StartupWMClass=$1
 EOF
 chmod 755 $trg
@@ -45,3 +44,5 @@ function run_nativefier () {
 run_nativefier https://trello.com/b/cEBcoTqe/scopevisio trello --maximize --inject trello.css
 
 run_nativefier https://wunderlist.com/de/\#/lists/inbox wunderlist 
+
+run_nativefier https://twitter.com/ twitter
