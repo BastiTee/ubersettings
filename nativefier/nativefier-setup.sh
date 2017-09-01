@@ -5,7 +5,8 @@ rm -rf build
 rm -f ~/.local/share/applications/nativefier_*
 mkdir -vp build
 defaults="--disable-dev-tools --disable-context-menu"
-  
+[ $( hostname ) == "zenbook" ] && defaults="$defaults --zoom 1.5"
+
 #------------------------------------------------------------------------------
 # HELPER 
 #------------------------------------------------------------------------------
@@ -46,3 +47,5 @@ run_nativefier https://trello.com/b/cEBcoTqe/scopevisio trello --maximize --inje
 run_nativefier https://wunderlist.com/de/\#/lists/inbox wunderlist 
 
 run_nativefier https://twitter.com/ twitter
+
+run_nativefier https://keep.google.com keep
