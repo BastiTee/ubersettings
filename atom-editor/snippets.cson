@@ -1,9 +1,16 @@
+# -----------------------------------------------------------------------------
+# ATOM SNIPPETS 
+# 
 # http://flight-manual.atom.io/using-atom/sections/snippets/
 # 
 # [..] add a snippet that would work for Java files, we would look up the
 # language-java package in our Settings view and we can see the Scope is
 # source.java [..]
+# -----------------------------------------------------------------------------
 
+# -----------------------------------------------------------------------------
+# JAVASCRIPT
+# -----------------------------------------------------------------------------
 '.source.js':
     'd3.js - attr':
         'prefix': 'attr'
@@ -11,39 +18,48 @@
     'd3.js - getter':
         'prefix': 'getter'
         'body': 'chart.$1 = function(value) {\n\tif (!arguments.length) return $1\n\t$1 = value;\n\treturn chart;\n}'
+
+# -----------------------------------------------------------------------------
+# MARKDOWN
+# -----------------------------------------------------------------------------
 '.source.gfm':
-    'Create a bash code-snippet':
+    'Bash code-snippet with prompt':
         'prefix': 'bash'
         'body': '```bash\nbasti@home:~\$ $1\n```'
-        'description': 'Insert a code-snippet with bash syntax.'
-    'Create a shell code-snippet':
-        'prefix': 'shell'
-        'body': '```shell\n#!/bin/bash\n\n$1\n```'
-        'description': 'Insert a code-snippet with shell syntax.'
+    'Shellscript code-snippet':
+        'prefix': 'shellscript'
+        'body': '```shell\n$1\n```'
+    'Haskell code-snippet':
+        'prefix': 'haskell'
+        'body': '```haskell\n$1\n```'
+    'Notebook shebang':
+        'prefix': 'shebang'
+        'body': '---\nlayout: post\nkeywords:\ntitle: "$1"\n---\n'
+
+# -----------------------------------------------------------------------------
+# PYTHON
+# -----------------------------------------------------------------------------
 '.source.python':
-    'Create default python3 shebang':
+    'Default python3 shebang':
         'prefix': 'shebang'
         'body': '#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n"""$1"""\n'
-        'description': 'Insert a shebang for python3.'
+
+# -----------------------------------------------------------------------------
+# SHELL 
+# -----------------------------------------------------------------------------
 '.source.shell':
-    'Create default bash shebang':
+    'Default bash shebang':
         'prefix': 'shebang'
         'body': '#!/bin/bash\n\n'
-        'description': 'Insert a shebang for bash.'
     'Change to script folder':
         'prefix': 'cdhere'
         'body': 'cd "$( dirname "$( readlink -f "\\$0" )" )"'
-        'description': 'Add the cd-to-script-folder recipe.'
     'Check for input file':
         'prefix': 'infile'
         'body': '[ -z "\\$1" ] || [ ! -f "\\$1" ] && {\n\techo "No input file provided."\n\texit 1\n}'
-        'description': 'Test if a file is provided as input argument.'
     'Check for input directory':
         'prefix': 'indir'
         'body': '[ -z "\\$1" ] || [ ! -d "\\$1" ] && {\n\techo "No input file provided."\n\texit 1\n}'
-        'description': 'Test if a directory is provided as input argument.'
     'Check for preinstalled tools':
         'prefix': 'checktools' 
         'body': 'for tool in $1; do\n\t[ -z $( command -v $tool ) ] && {\n\t\techo "\'\$tool\' not installed."\n\t\tdo_exit=1\n\t}\ndone\n[ "$do_exit" == "1" ] && exit 1'
-        'description': 'Test if a list of tools is currently installed.'
-        
