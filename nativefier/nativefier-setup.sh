@@ -1,9 +1,6 @@
 #!/bin/bash
 cd "$( dirname "$( readlink -f "$0" )" )"
 [ -z $( command -v nativefier ) ] && sudo npm install -g nativefier
-rm -rf build
-rm -f ~/.local/share/applications/nativefier_*
-mkdir -vp build
 defaults="--disable-dev-tools --disable-context-menu"
 [ $( hostname ) == "zenbook" ] && defaults="$defaults --zoom 1.5"
 
@@ -34,6 +31,7 @@ function run_nativefier () {
     shift 
     name=$1
     shift
+    rm -rf build/$name-linux-x64
     nativefier $url -n $name ${defaults} $@ build/
     desktop_link $name build/$name-linux-x64/$name
 }
@@ -42,6 +40,15 @@ function run_nativefier () {
 # SETUPS 
 #------------------------------------------------------------------------------
 
+mkdir -vp build
+
+if [ ! -z "$1" ] # if provided, only run nativefier for given URL
+then
+    run_nativefier $@
+    exit 0
+fi
+
+# otherwise run standards 
 run_nativefier https://trello.com/b/cEBcoTqe/scopevisio trello --maximize --inject trello.css
 
 run_nativefier https://wunderlist.com/de/\#/lists/inbox wunderlist 
