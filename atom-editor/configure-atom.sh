@@ -53,6 +53,7 @@ beautysh \
 autopep8 \
 flake8 \
 flake8-docstrings \
+python-language-server \
 "
 
 sudo apt update && \

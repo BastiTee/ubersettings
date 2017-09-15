@@ -3,7 +3,7 @@
     general:
       _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
     markdown:
-      default_beautifier: "Remark"
+      beautify_on_save: true
   core:
     audioBeep: false
     autoHideMenuBar: true
@@ -28,7 +28,8 @@
     disabledProviders: [
       "Flake8"
     ]
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 101
   pigments:
     notifyReloads: false
   "symbols-tree-view":
