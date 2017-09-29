@@ -17,12 +17,14 @@ $rem_system 602 # /window-list/
 $rem_system 10 # /windownavigator/
 $rem_system 7 # /removable-drive-menu/
 $rem_system 881 # /screenshot-window-sizer/
+# -------- below: remove root installation and reinstall in user land 
 $rem_system 21 # /workspace-indicator/
 $rem_system 15 # /alternatetab/
 
 echo "RE-INSTALL USER EXTENSIONS..."
 
 inst_user="$GEM --install --user --extension-id"
+$inst_user 21 # /workspace-indicator/
 $inst_user 15 # /alternatetab/
 $inst_user 307 # /dash-to-dock/
 $inst_user 959 # /disable-workspace-switcher-popup/
