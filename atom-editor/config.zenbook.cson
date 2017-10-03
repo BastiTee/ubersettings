@@ -13,6 +13,9 @@
       "pigments"
       "whitespace"
       "tidy-markdown"
+      "linter-flake8"
+      "linter"
+      "linter-ui-default"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -20,7 +23,7 @@
       "nord-atom-syntax"
     ]
   editor:
-    fontSize: 17
+    fontSize: 20
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
