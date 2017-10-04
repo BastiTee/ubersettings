@@ -9,7 +9,6 @@
     autoHideMenuBar: true
     closeDeletedFileTabs: true
     disabledPackages: [
-      "spell-check"
       "pigments"
       "whitespace"
     ]
@@ -33,6 +32,17 @@
     panelHeight: 101
   pigments:
     notifyReloads: false
+  "spell-check":
+    knownWords: [
+      "erstmal"
+      "GRÜNE"
+      "AfD"
+      "Darüber"
+      "Open-Source"
+    ]
+    locales: [
+      "de-DE"
+    ]
   "symbols-tree-view":
     autoToggle: true
   welcome:
