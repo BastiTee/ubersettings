@@ -4,9 +4,12 @@
 # -----------------------------------------------------------------------------
 
 SYS_PACKAGES="\
+moreutits \
 vim \
 python3 \
 python3-pip \
+`# Spell checking package` \
+hunspell-de-de \
 "
 
 ATOM_PACKAGES="\
@@ -75,3 +78,20 @@ for atom_package in $ATOM_PACKAGES; do
         echo "   > already installed."
     }
 done
+
+# fix hunspell dictionaries ----------------------------
+tmpf=$( mktemp )
+cat << EOF > $tmpf
+cd /usr/share/hunspell
+file * | grep "ISO-8859 text" | cut -d":" -f1 |\
+while read file; do
+    iconv -f "iso-8859-1" -t "utf-8" \$file > \${file}.2
+    mv \${file} \${file}.old
+    mv \${file}.2 \${file}
+done
+echo "---"
+file *
+EOF
+chmod a+x $tmpf
+sudo $tmpf
+rm $tmpf

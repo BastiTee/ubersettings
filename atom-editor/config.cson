@@ -4,6 +4,9 @@
       _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
     markdown:
       beautify_on_save: true
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": false
   core:
     audioBeep: false
     autoHideMenuBar: true
@@ -33,15 +36,41 @@
   pigments:
     notifyReloads: false
   "spell-check":
+    addKnownWords: true
     knownWords: [
       "erstmal"
       "GRÜNE"
       "AfD"
       "Darüber"
       "Open-Source"
+      "Vectoring"
+      "Corporate"
+      "infrastrukturelle"
+      "Außerdem"
+      "bzw"
+      "Mason"
+      "UK"
+      "vgl"
+      "Abdeckungswerte"
+      "FTTH"
+      "FTTB"
+      "kupferbasierte"
+      "NGA"
+      "Außerdem"
+      "Europäische"
+      "Europäischen"
+      "usw"
+      "Außerdem"
+      "Docsis"
+      "FTTP"
+      "LTE"
+      "NGA"
+      "HSPA"
+      "unternehmenspolitischen"
     ]
     locales: [
       "de-DE"
+      "en-US"
     ]
   "symbols-tree-view":
     autoToggle: true
