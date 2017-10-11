@@ -9,7 +9,6 @@
     autoHideMenuBar: true
     closeDeletedFileTabs: true
     disabledPackages: [
-      "spell-check"
       "pigments"
       "whitespace"
       "tidy-markdown"
@@ -23,7 +22,7 @@
       "nord-atom-syntax"
     ]
   editor:
-    fontSize: 20
+    fontSize: 19
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
@@ -37,6 +36,10 @@
     panelHeight: 81
   pigments:
     notifyReloads: false
+  "spell-check":
+    locales: [
+      "de-DE"
+    ]
   "symbols-tree-view":
     autoToggle: true
   welcome:
