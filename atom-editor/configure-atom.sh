@@ -47,6 +47,10 @@ atom-ide-ui \
 ide-typescript \
 `# Python language support for Atom-IDE` \
 ide-python \
+`# Hyperclick subsystem` \
+hyperclick \
+`# Open hyperlink in new browser window` \
+hyperlink-hyperclick \
 "
 
 PY_PACKAGES="\
