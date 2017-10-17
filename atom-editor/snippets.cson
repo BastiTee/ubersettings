@@ -43,8 +43,8 @@
     'Default python3 shebang':
         'prefix': 'shebang'
         'body': '#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n"""$1"""\n'
-    'Separator comment':
-        'prefix': '#sep'
+    'Add a horizontal rule':
+        'prefix': 'hrule'
         'body': '# -----------------------------------------------------------------------------'
 
 # -----------------------------------------------------------------------------
