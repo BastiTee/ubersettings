@@ -3,6 +3,8 @@
 # colors. Base project: https://github.com/horst3180/arc-firefox-theme
 # -----
 
+cd "$( dirname "$( readlink -f "$0" )" )"
+rm -rf arc-firefox-theme
 git clone https://github.com/horst3180/arc-firefox-theme
 cd arc-firefox-theme
 
@@ -17,6 +19,7 @@ replace 2F343F 292929
 replace 353945 313434
 replace 383C4A 393F3F
 replace 404552 424040
+replace 2E3436 E2E4E6
 
 ./autogen.sh --disable-light --disable-darker
 make mkxpi
