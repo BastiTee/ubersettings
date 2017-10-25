@@ -33,6 +33,7 @@
     ]
   "linter-ui-default":
     panelHeight: 101
+    showPanel: true
   pigments:
     notifyReloads: false
   "spell-check":

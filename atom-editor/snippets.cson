@@ -66,3 +66,9 @@
     'Check for preinstalled tools':
         'prefix': 'checktools' 
         'body': 'for tool in $1; do\n\t[ -z $( command -v $tool ) ] && {\n\t\techo "\'\$tool\' not installed."\n\t\tdo_exit=1\n\t}\ndone\n[ "$do_exit" == "1" ] && exit 1'
+    'Add a horizontal rule':
+        'prefix': 'hrule'
+        'body': '# -----------------------------------------------------------------------------'
+    'Include bastis bash commons':
+        'prefix': 'bbc'
+        'body': 'source <(curl -s https://bbc.basti.site)'
