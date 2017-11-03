@@ -87,6 +87,8 @@
       "vorverarbeitet"
       "Realtime"
       "Anfragemodus"
+      "Deskewing"
+      "Kanonisierung"
     ]
     locales: [
       "de-DE"
