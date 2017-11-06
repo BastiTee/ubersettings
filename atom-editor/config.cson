@@ -89,6 +89,8 @@
       "Anfragemodus"
       "Deskewing"
       "Kanonisierung"
+      "basti"
+      "admin"
     ]
     locales: [
       "de-DE"
