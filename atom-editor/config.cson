@@ -4,6 +4,8 @@
       _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
     markdown:
       beautify_on_save: true
+      default_beautifier: "Remark"
+      disabled: true
   "atom-ide-ui":
     use:
       "atom-ide-diagnostics-ui": false
