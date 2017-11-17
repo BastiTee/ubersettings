@@ -51,6 +51,8 @@ ide-python \
 hyperclick \
 `# Open hyperlink in new browser window` \
 hyperlink-hyperclick \
+`# Collaborative coding` \
+teletype
 "
 
 PY_PACKAGES="\
