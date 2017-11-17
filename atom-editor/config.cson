@@ -13,10 +13,6 @@
     audioBeep: false
     autoHideMenuBar: true
     closeDeletedFileTabs: true
-    disabledPackages: [
-      "pigments"
-      "whitespace"
-    ]
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
