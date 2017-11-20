@@ -47,6 +47,8 @@ atom-ide-ui \
 ide-typescript \
 `# Python language support for Atom-IDE` \
 ide-python \
+`# Java language support for Atom-IDE` \
+ide-java \
 `# Hyperclick subsystem` \
 hyperclick \
 `# Open hyperlink in new browser window` \

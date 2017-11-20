@@ -11,6 +11,8 @@ XSLT-Debugger
 com.intellij.copyright
 com.intellij.tasks
 com.intellij.uiDesigner
+com.jedide.apex
+com.vladsch.idea.multimarkdown
 hg4idea
 org.intellij.groovy
 org.jetbrains.android
