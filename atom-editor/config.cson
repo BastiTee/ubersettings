@@ -37,6 +37,8 @@
   "linter-ui-default":
     panelHeight: 101
     showPanel: true
+  "markdown-preview":
+    liveUpdate: false
   pigments:
     notifyReloads: false
   "spell-check":
@@ -105,3 +107,5 @@
     autoToggle: true
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
