@@ -27,6 +27,8 @@ linter \
 linter-ui-default \
 `# Linter for Python / flake8` \
 linter-flake8 \
+`# Linter for ecma script` \
+linter-eslint \
 `# Python completions for packages, variables, etc with their arguments` \
 autocomplete-python \
 `# Allow for jumping between cursor positions` \
