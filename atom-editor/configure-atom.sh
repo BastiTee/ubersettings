@@ -5,7 +5,6 @@
 
 SYS_PACKAGES="\
 moreutils \
-vim \
 python3 \
 python3-pip \
 `# Spell checking package` \
@@ -15,13 +14,33 @@ hunspell-en-gb \
 "
 
 ATOM_PACKAGES="\
-`# Beautify HTML, CSS, JavaScript, Python and more in Atom` \
-atom-beautify \
+`# ----- UTILITIES -----`
 `# Basic sorting of selected lines` \
 sort-lines \
+`# Allow for jumping between cursor positions` \
+last-cursor-position \
+`# Open recent files/projects` \
+open-recent \
+`# Highlights the current word selected when double clicking` \
+highlight-selected \
+`# Hyperclick subsystem` \
+hyperclick \
+`# Open hyperlink in new browser window` \
+hyperlink-hyperclick \
+`# Graphical color selector` \
+color-picker \
+`# A sublime style preview of the full source code` \
+minimap \
+`# A package to display colors in project and files` \
+pigments \
+`# Beautify HTML, CSS, JavaScript, Python and more in Atom` \
+atom-beautify \
+`# Keep the opened tabs amount below specified limit` \
+zentabs \
+`# ----- LINTER FEATURES -----`
 `# Base package for showing intentions in Atom` \
 intentions \
-`# Provides an easy to use API to show your package is performing a task` \
+`# Easy to use API to show your package is performing a task` \
 busy-signal \
 `# A Base Linter with Cow Powers` \
 linter \
@@ -31,20 +50,7 @@ linter-ui-default \
 linter-flake8 \
 `# Linter for ecma script` \
 linter-eslint \
-`# Python completions for packages, variables, etc with their arguments` \
-autocomplete-python \
-`# Allow for jumping between cursor positions` \
-last-cursor-position \
-`# Open recent files/projects` \
-open-recent \
-`# Highlights the current word selected when double clicking` \
-highlight-selected \
-`# Graphical color selector` \
-color-picker \
-`# A sublime style preview of the full source code` \
-minimap \
-`# A package to display colors in project and files` \
-pigments \
+`# ----- IDE FEATURES -----`
 `# A collection of Atom UIs to support language services` \
 atom-ide-ui \
 `# TypeScript and JavaScript language support for Atom-IDE` \
@@ -53,10 +59,7 @@ ide-typescript \
 ide-python \
 `# Java language support for Atom-IDE` \
 ide-java \
-`# Hyperclick subsystem` \
-hyperclick \
-`# Open hyperlink in new browser window` \
-hyperlink-hyperclick \
+`# ----- COLLABORATION FEATURES -----`
 `# Collaborative coding` \
 teletype
 "
@@ -70,6 +73,25 @@ flake8 \
 flake8-docstrings \
 python-language-server \
 "
+
+echo "++ updating atom"
+dl_link=$( curl -s https://atom.io/download/deb |\
+sed -e "s/.*href=\"//" -e "s/\".*/\n/" -e "s/?.*/\n/" )
+version_remote=$( echo $dl_link | sed -e "s/.*\/v//" -e "s/\/.*//" )
+version_local=$( atom --version | head -n1 | awk '{ print $3}' )
+echo "   dl-link: $dl_link"
+echo "   dl-vers: $version_remote"
+echo "   lo-vers: $version_local"
+# version_local="1.0.0"
+if [ "$version_local" == "$version_remote" ]
+then
+    echo "   -- atom up-to-date"
+else
+    echo "   -- newer version available"
+    curl -L https://atom.io/download/deb --output /tmp/atom.deb
+    sudo apt install /tmp/atom.deb
+    rm -f /tmp/atom.deb
+fi
 
 echo "++ installing system dependencies"
 sudo apt update && \
@@ -121,3 +143,6 @@ do
 done
 echo "++ packages: $uninstall_list"
 [ ! -z "$uninstall_list" ] && apm uninstall $uninstall_list
+
+echo "++ upgrading apm-packages"
+apm upgrade --no-confirm
