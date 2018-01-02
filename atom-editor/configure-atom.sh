@@ -9,7 +9,9 @@ vim \
 python3 \
 python3-pip \
 `# Spell checking package` \
+hunspell \
 hunspell-de-de \
+hunspell-en-gb \
 "
 
 ATOM_PACKAGES="\
@@ -94,10 +96,10 @@ echo "++ fix hunspell dictionaries"
 tmpf=$( mktemp )
 cat << EOF > $tmpf
 cd /usr/share/hunspell
-file * | grep "ISO-8859 text" | cut -d":" -f1 |\
+file * | grep "ISO-8859 text" | grep -v ".old" | cut -d":" -f1 |\
 while read file; do
     iconv -f "iso-8859-1" -t "utf-8" \$file > \${file}.2
-    mv \${file} \${file}.old
+    [ ! -f \${file}.old ] && mv \${file} \${file}.old
     mv \${file}.2 \${file}
 done
 echo "---"
@@ -118,4 +120,4 @@ do
     fi
 done
 echo "++ packages: $uninstall_list"
-apm uninstall $uninstall_list
+[ ! -z "$uninstall_list" ] && apm uninstall $uninstall_list
