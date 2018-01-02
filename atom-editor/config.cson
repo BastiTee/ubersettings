@@ -109,3 +109,7 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
+  zentabs:
+    maximumOpenedTabs: 10
+    neverCloseNew: true
+    neverCloseUnsaved: true
