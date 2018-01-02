@@ -1,10 +1,10 @@
 #!/bin/bash
 # -----------------------------------------------------------------------------
-# BASTI'S ATOM EXTENSION RECOMMENDATIONS
+# BASTI'S ATOM EXTENSION RECOMMENDATIONS FOR UBUNTU
 # -----------------------------------------------------------------------------
 
 SYS_PACKAGES="\
-moreutits \
+moreutils \
 vim \
 python3 \
 python3-pip \
@@ -69,6 +69,7 @@ flake8-docstrings \
 python-language-server \
 "
 
+echo "++ installing system dependencies"
 sudo apt update && \
 sudo apt install -y $SYS_PACKAGES
 sudo -H python3 -m pip install $PY_PACKAGES
@@ -89,7 +90,7 @@ for atom_package in $ATOM_PACKAGES; do
     }
 done
 
-# fix hunspell dictionaries ----------------------------
+echo "++ fix hunspell dictionaries"
 tmpf=$( mktemp )
 cat << EOF > $tmpf
 cd /usr/share/hunspell
@@ -105,3 +106,16 @@ EOF
 chmod a+x $tmpf
 sudo $tmpf
 rm $tmpf
+
+echo "++ uninstalling experimental apm-packages"
+uninstall_list=""
+for pack in $(apm list -pbi | tr "@" " " | awk '{print $1}' | grep -v -e "^$")
+do
+    sys_pack_search=$( echo $ATOM_PACKAGES | tr " " "\n" | grep $pack )
+    if [ -z "$sys_pack_search" ];
+    then
+        uninstall_list="$uninstall_list $pack"
+    fi
+done
+echo "++ packages: $uninstall_list"
+apm uninstall $uninstall_list
