@@ -11,6 +11,7 @@ python3-pip \
 hunspell \
 hunspell-de-de \
 hunspell-en-gb \
+hunspell-en-us \
 "
 
 ATOM_PACKAGES="\

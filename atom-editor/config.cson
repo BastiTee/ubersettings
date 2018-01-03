@@ -30,13 +30,9 @@
   "ide-java":
     errors:
       incompleteClasspathSeverity: "ignore"
-  linter:
-    disabledProviders: [
-      "Flake8"
-    ]
+  linter: {}
   "linter-ui-default":
     panelHeight: 101
-    showPanel: true
   "markdown-preview":
     liveUpdate: false
   pigments:
@@ -102,6 +98,7 @@
     locales: [
       "de-DE"
       "en-US"
+      "en-GB"
     ]
   "symbols-tree-view":
     autoToggle: true
