@@ -94,6 +94,9 @@
       "admin"
       "workflow"
       "GitHub"
+      "SVGs"
+      "DIVs"
+      "BastiTee"
     ]
     locales: [
       "de-DE"
@@ -105,7 +108,7 @@
   welcome:
     showOnStartup: false
   whitespace:
-    ensureSingleTrailingNewline: false
+    ensureSingleTrailingNewline: true
   zentabs:
     maximumOpenedTabs: 10
     neverCloseNew: true
