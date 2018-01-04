@@ -3,6 +3,8 @@
 # BASTI'S ATOM EXTENSION RECOMMENDATIONS FOR UBUNTU
 # -----------------------------------------------------------------------------
 
+sudo echo # to prompt immediately
+
 SYS_PACKAGES="\
 moreutils \
 python3 \
