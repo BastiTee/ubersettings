@@ -13,10 +13,12 @@ mkdir -vp ${target}
 # defaults
 link keymap.cson ${target}/keymap.cson
 link snippets.cson ${target}/snippets.cson
-link init.coffee ${target}/init.coffee
-# machine-specific 
-[ $hn == "zenbook" ] && config="config.zenbook.cson" || config="config.cson"
-link $config ${target}/config.cson
+link config.cson ${target}/config.cson
+
+# machine-specific
+[ $hn == "zenbook" ] && config="init.zenbook.coffee" || config="init.coffee"
+link $config ${target}/init.coffee
+
 [ $hn == "zenbook" ] && config="styles.zenbook.less" || config="styles.less"
 link $config ${target}/styles.less
 

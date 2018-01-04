@@ -32,7 +32,7 @@
       incompleteClasspathSeverity: "ignore"
   linter: {}
   "linter-ui-default":
-    panelHeight: 101
+    panelHeight: 81
   "markdown-preview":
     liveUpdate: false
   pigments:
