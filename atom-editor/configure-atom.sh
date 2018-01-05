@@ -1,6 +1,6 @@
 #!/bin/bash
 # -----------------------------------------------------------------------------
-# BASTI'S ATOM EXTENSION RECOMMENDATIONS FOR UBUNTU
+# BASTI'S ATOM SETUP FOR UBUNTU
 # -----------------------------------------------------------------------------
 
 sudo echo # to prompt immediately

@@ -15,6 +15,9 @@
     audioBeep: false
     autoHideMenuBar: true
     closeDeletedFileTabs: true
+    disabledPackages: [
+      "pigments"
+    ]
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
@@ -30,7 +33,10 @@
   "ide-java":
     errors:
       incompleteClasspathSeverity: "ignore"
-  linter: {}
+  linter:
+    disabledProviders: [
+      "ESLint"
+    ]
   "linter-ui-default":
     panelHeight: 81
   "markdown-preview":
