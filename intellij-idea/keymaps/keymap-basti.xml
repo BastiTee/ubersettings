@@ -32,4 +32,7 @@
   <action id="ToggleFullScreen">
     <keyboard-shortcut first-keystroke="f11" />
   </action>
+  <action id="ToggleMainMenuAction">
+    <keyboard-shortcut first-keystroke="f10" />
+  </action>
 </keymap>
