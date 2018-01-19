@@ -1,8 +1,8 @@
 # -----------------------------------------------------------------------------
-# ATOM SNIPPETS 
-# 
+# ATOM SNIPPETS
+#
 # http://flight-manual.atom.io/using-atom/sections/snippets/
-# 
+#
 # [..] add a snippet that would work for Java files, we would look up the
 # language-java package in our Settings view and we can see the Scope is
 # source.java [..]
@@ -41,6 +41,9 @@
     'Notebook shebang':
         'prefix': 'shebang'
         'body': '---\nlayout: post\nkeywords:\ntitle: "$1"\n---\n'
+    'Jekyll image template':
+        'prefix': 'jimage'
+        'body': '{% include img.html src="/res/blogres/$1" width=100 desc=null border=true %}'
 
 # -----------------------------------------------------------------------------
 # PYTHON
@@ -54,7 +57,7 @@
         'body': '# -----------------------------------------------------------------------------'
 
 # -----------------------------------------------------------------------------
-# SHELL 
+# SHELL
 # -----------------------------------------------------------------------------
 '.source.shell':
     'Default bash shebang':
@@ -70,7 +73,7 @@
         'prefix': 'indir'
         'body': '[ -z "\\$1" ] || [ ! -d "\\$1" ] && {\n\techo "No input file provided."\n\texit 1\n}'
     'Check for preinstalled tools':
-        'prefix': 'checktools' 
+        'prefix': 'checktools'
         'body': 'for tool in $1; do\n\t[ -z $( command -v $tool ) ] && {\n\t\techo "\'\$tool\' not installed."\n\t\tdo_exit=1\n\t}\ndone\n[ "$do_exit" == "1" ] && exit 1'
     'Add a horizontal rule':
         'prefix': 'hrule'
