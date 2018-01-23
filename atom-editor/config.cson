@@ -36,9 +36,11 @@
   linter:
     disabledProviders: [
       "ESLint"
+      "Flake8"
     ]
   "linter-ui-default":
     panelHeight: 81
+    showPanel: true
   "markdown-preview":
     liveUpdate: false
   pigments:

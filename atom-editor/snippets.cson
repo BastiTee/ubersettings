@@ -43,7 +43,7 @@
         'body': '---\nlayout: post\nkeywords:\ntitle: "$1"\n---\n'
     'Jekyll image template':
         'prefix': 'jimage'
-        'body': '{% include img.html src="/res/blogres/$1" width=100 desc=null border=true %}'
+        'body': '{% include img.html src="/res/blogres/$1" width=$2 desc="$3" border=true %}'
 
 # -----------------------------------------------------------------------------
 # PYTHON
