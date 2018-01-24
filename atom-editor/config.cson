@@ -24,6 +24,7 @@
       "nord-atom-syntax"
     ]
   editor:
+    fontSize: 20
     scrollSensitivity: 90
     softWrap: true
     softWrapAtPreferredLineLength: true
@@ -105,6 +106,7 @@
       "SVGs"
       "DIVs"
       "BastiTee"
+      "scrapen"
     ]
     locales: [
       "de-DE"
