@@ -1,0 +1,65 @@
+[
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1516803215816,
+		"name": "booky.io – dark & distraction-free",
+		"sections": [
+			{
+				"code": "/************************************\n * USABILITY\n ************************************/\n.link a:focus {\n    /* highlighted tab-selection */\n    background-color: rgba(97, 164, 249, 0.2) !important;\n}\n\n/************************************\n * DISTRACTION FREE\n ************************************/\n.add-bookmark,\n#navigation,\n#new-category,\n#footer {\n    display: none;\n}\n.sortable {\n    margin-top: 4em;\n}\n#sortable1 {\n    width: 28em;\n}\n#sortable2 {\n    width: 28em;\n}\n#messages {\n    top: 0em;\n}\n.group {\n    padding-bottom: 0em;\n}\n.portlet-header {\n    margin-top: 0.4em !important;\n}\n#filter {\n    margin-left: 1.5em;\n    top: 0.9em;\n    left: 0;\n    height: 1.6em;\n}\n#top-buttons {\n    left: 45.5em;\n}\n::-webkit-scrollbar {\n    display: none;\n}\n\n/************************************\n * DARK THEME\n ************************************/\nbody,\n#main {\n    background-color: #313434;\n}\n#messages {\n    background-color: #292929;\n}\n.link a,\n.portlet-header {\n    color: #E2E4E6 !important;\n}\n.button-style {\n    background-color: #313434 !important;\n    border: 1px solid #81807F !important;\n}\n#filter {\n    background-color: #313434 !important;\n    color: #E2E4E6 !important;\n}",
+				"urls": [
+					"https://booky.io/"
+				],
+				"urlPrefixes": [],
+				"domains": [],
+				"regexps": []
+			}
+		],
+		"id": 1
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1516803453682,
+		"name": "outlook webapp – dark",
+		"sections": [
+			{
+				"code": "/************************************************************************\n* GLOBAL DEFINITIONS \n************************************************************************/\n\n/*\n    Light blue | 87AFDF\n    Light red | D78787\n    Neon green | AFD787\n    Cyan | AFDFDF\n    Magenta | DFAFDF\n    Yellow | FFFFAF\n    White | FFFFFF\n    Super light grey | E2E4E6\n    Even lighter grey | 81807F\n    Lighter grey | 696969\n    Basic grey | 393F3F\n    Darker grey | 313434\n    Even darker grey | 292929\n    Black | 000\n    Default windows grey | F0F0F0\n    */\n* {\n    /* Even darker grey */\n    --bg: #292929;\n    /* Basic grey */\n    --bg-medium: #393F3F;\n    /* Light grey */\n    --bg-light: #696969;\n    /* Light blue */\n    --hlight-1: #87AFDF;\n    /* Light red */\n    --hlight-2: #D78787;\n    /* Yellow */\n    --hlight-3: #FFFFAF;\n    /* White */\n    --fg: #F0F0F0;\n    background-color: var(--bg) !important;\n    color: var(--fg) !important;\n}\n\n/************************************************************************\n* MAIL VIEW\n************************************************************************/\n\n/* Search bar & mail list headers */\n#divBasicSearch *,\n#divHeaders * {\n    color: var(--hlight-1) !important;\n}\n\n/* Outlook logo top left */\n#divBrandLogo {\n    display: none;\n}\n\n/* Mail composition: To/From/CC/BCC fields..  */\n.rwRRO,\n#spnActions,\n#spnSent,\n#divConvTopic {\n    color: var(--hlight-1) !important;\n}\n\n/* Mail composition fields */\n.rwW,\n.rwRR,\n.txtField,\n.txtWell {\n    border: none !important;\n    background-color: var(--bg-medium) !important;\n}\n\n/* Grey background on mail composition headers */\n#spnR {\n    background-color: var(--bg-medium) !important;\n    color: var(--fg) !important;\n}\n\n/* Add a separator between mail headers and mail body */\n#divBdy {\n    border-top: 1px solid var(--bg-light)\n}\n\n/* Remove all the bitmap-based gradients */\n.vlvExpSel,\n.divPrtBkSel,\n.nbMnuItm,\n.nbMnuItmN,\n.nbHiLt,\n#divNvDrag,\n#divInfobarColor,\n#divDividerTile,\n.sprites-hdiv-r-png,\n#divDraftsBkMask,\n#divDraftsBk,\n#spnTrNdCnt,\n#spnFldrNm,\n.trNd,\n#spnFldrNm,\n#spnC,\n#spnCV,\n#spnUC,\n#spnTrNdCnt,\n#spnFldrNm {\n    background: none !important;\n}\n\n/* No border over main panels */\n#divNvPn,\n#divLVContainer {\n    border: none;\n}\n\n/* Mail composition format buttons */\n#imgNvDrag,\n#divNvDrag,\n#divFmtBr,\n#divIB,\n#divInfobarColor,\n.fbBtn,\n.fbBtnGrp {\n    border: none !important;\n}\n\n/* Draft items: Red borders */\n#divExp.draftItem,\n#divClps.draftItem {\n    border: 1px solid var(--hlight-2);\n}\n\n/* Highlighting of unread messages and folders with unread messages */\n.ur,\n.ur *,\n.fufw {\n    color: var(--hlight-2) !important;\n}\n\n/* Highlighting of currently selected mail or currently selected mail folder */\n.sel *,\n#sr.sel,\n#vr.sel,\n#divTrNdEff.trDefSel,\n#ec.sprites-plus-png,\n#ec.sprites-inbox-png {\n    background-color: var(--bg-medium) !important;\n}\n\n/* Better date separator */\n.gbIL > .gh.fgh {\n    height: 24px;\n}\n.gh {\n    font-size: 90% !important;\n    bottom: 7px;\n}\n.ghcnts {\n    color: var(--hlight-1) !important;\n}\n\n/* Get rid of top bar that takes a lot of space */\n#divAlertBarContainer {\n    top: 0px;\n    border: none !important;\n}\n#divMainPage {\n    border: none !important;\n    top: 30px;\n}\n\n/* Scrollbars */\n#divScrollbar {\n    opacity: 0.1 !important;\n}\n.vlvExpSel * {\n    background-color: var(--bg-medium) !important;\n}\n\n/* Fix the folding icons on mail details */\n.sprites-pipe-end-png,\n.sprites-pipe-stop-s-png {\n    background-image: none;\n}\n.sprites-minus-png {\n    background-color: var(--bg-medium) !important;\n}\n\n/* Fix the content menu */\n.cmLnk {\n    border: none !important;\n}\n.cmHiLite * {\n    color: var(--hlight-1) !important;\n}\n\n/* Consistent button hover from yellow frame to blue text */\n.tbfHvr:hover,\n.fbBiuBtn:hover,\n.alertBtnBorder {\n    border-color: var(--bg) !important;\n}\n.tbfHvr:hover *,\n.fbBiuBtn:hover *,\n.alertBtnTxt:hover {\n    color: var(--hlight-1) !important;\n}\n\n/************************************************************************\n* CALENDAR VIEW\n************************************************************************/\ndiv#divDVEventAreaGradient {\n    background: var(--bg-light) !important;\n    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);\n}\ndiv#divDVEventContainer:hover {\n    height: 20em !important;\n}\n.calContainer:hover {\n    background: var(--hlight-1) !important;\n    transition: all 300ms ease-in;\n    padding: 1em !important;\n}\n#spanDayName {\n    font-size: 10px !important;\n}\n#divDVHeader {\n    top: 15px !important;\n}\n\n/************************************************************************\n* LOGIN WINDOW\n************************************************************************/\n.tdConnImg,\n#mdRt,\n#mdLft,\n.tblLgn {\n    display: none;\n}\n.btn {\n    animation: fadein 2s;\n}\n.btnOnMseOvr {\n    color: var(--hlight-1) !important;\n    cursor: pointer;\n    animation: fadein 2s;\n}\n@keyframes fadein {\n    from {\n        opacity: 0;\n    }\n    to {\n        opacity: 1;\n    }\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [],
+				"regexps": [
+					"https://webmail.*\\.com.*"
+				]
+			}
+		],
+		"id": 2
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1516803614385,
+		"name": "jira kanban – dark",
+		"sections": [
+			{
+				"code": ".ghx-swimlane-header {\n    background-color: #313434;\n}\n.ghx-swimlane-header:after {\n    box-shadow: none !important;\n}\n.ghx-swimlane-header .ghx-heading {\n    margin: 4px 0 !important;\n    font-size: 80%;\n}\n.ghx-swimlane-header .ghx-description {\n    font-size: 90%;\n}\n.ghx-issue .ghx-highlighted-fields {\n    margin-top: 3px;\n}\n.ghx-issue .ghx-highlighted-fields * {\n    font-size: 11px;\n}\n#gh,\n#ghx-pool,\n#ghx-column-headers,\n#ghx-detail-view * {\n    background-color: #313434 !important;\n    color: #e2e4e6 !important;\n}\n.ghx-group {\n    background: #414141 !important;\n    color: #e2e4e6 !important;\n}\n.ghx-parent-stub .ghx-key {\n    border-left: 10px solid #414141 !important;\n    color: #e2e4e6 !important;\n    font-weight: bold !important;\n}\n.ghx-parent-stub .ghx-summary {\n    color: #e2e4e6 !important;\n}\n.ghx-parent-stub {\n    border-top: none;\n    background: none;\n}\n.ghx-issue,\n.ghx-issue-content {\n    background-color: #393F3F !important;\n    border: none;\n    border-bottom: 1px solid #696969;\n}\n.ghx-issue-content {\n    padding-bottom: 1px !important;\n}\n.ghx-days {\n    display: none;\n}\n#ghx-column-headers h2 {\n    color: #e2e4e6 !important;\n}\n.ghx-inner {\n    color: #e2e4e6 !important;\n}\n.js-key-link {\n    color: #e2e4e6 !important;\n    font-weight: bold;\n}\n.ghx-column {\n    background-color: #313434 !important;\n}\n.ghx-column.ui-sortable {\n    background-color: #414141 !important;\n}\n.ghx-qty,\n.ghx-qty h2 {\n    color: #e2e4e6 !important;\n}\n#ghx-release {\n    display: none;\n}\n#js-work-quickfilters * {\n    color: #e2e4e6 !important;\n}\n.ghx-active {\n    background-color: #87AFDF !important;\n}\n.ghx-column-headers .ghx-column {\n    border-bottom: 2px solid #696969;\n}\n*::-webkit-scrollbar {\n    width: 15px;\n}\n*::-webkit-scrollbar-thumb {\n    background: #393F3F;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [],
+				"regexps": [
+					".*RapidBoard\\.jspa.*"
+				]
+			}
+		],
+		"id": 3
+	}
+]
