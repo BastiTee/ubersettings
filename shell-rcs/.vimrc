@@ -27,3 +27,6 @@ set tabstop=4
 
 " :h syntax | Syntax highlighting enables Vim to show parts of the text in another font or color
 syntax on
+
+" Maps command 'Run the current script' to F9
+nnoremap <F9> :!%:p
