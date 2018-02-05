@@ -4,10 +4,7 @@
       _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
     java:
       beautify_on_save: true
-    markdown:
-      beautify_on_save: true
-      default_beautifier: "Remark"
-      disabled: true
+    markdown: {}
   "atom-ide-ui":
     use:
       "atom-ide-diagnostics-ui": false
@@ -24,7 +21,6 @@
       "nord-atom-syntax"
     ]
   editor:
-    fontSize: 20
     scrollSensitivity: 90
     softWrap: true
     softWrapAtPreferredLineLength: true
@@ -41,7 +37,6 @@
     ]
   "linter-ui-default":
     panelHeight: 81
-    showPanel: true
   "markdown-preview":
     liveUpdate: false
   pigments:
@@ -107,6 +102,9 @@
       "DIVs"
       "BastiTee"
       "scrapen"
+      "Nextcloud"
+      "deskewing"
+      "crontab"
     ]
     locales: [
       "de-DE"

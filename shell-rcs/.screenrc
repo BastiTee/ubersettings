@@ -1,4 +1,17 @@
+# No startup message when starting screen
 startup_message off
+
+# Longer scrollback support
 defscrollback 10000
-# http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html
+
+# Caption definition
+# <http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html>
 caption always "%S | %w | %H |"
+
+# Start with <1> as screen number
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+
+# -- fin.
