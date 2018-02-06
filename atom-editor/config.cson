@@ -105,6 +105,10 @@
       "Nextcloud"
       "deskewing"
       "crontab"
+      "Owncloud"
+      "DevOps"
+      "github"
+      "Dockerfile"
     ]
     locales: [
       "de-DE"

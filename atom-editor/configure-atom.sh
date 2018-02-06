@@ -62,6 +62,8 @@ ide-typescript \
 ide-python \
 `# Java language support for Atom-IDE` \
 ide-java \
+`# Docker language support` \
+language-docker \
 `# ----- COLLABORATION FEATURES -----`
 `# Collaborative coding` \
 teletype
