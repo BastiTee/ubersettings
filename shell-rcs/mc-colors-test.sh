@@ -2,9 +2,9 @@
 mc --colors \
 `# File display `\
 normal=white,default:\
-selected=yellow,gray:\
-marked=red,default:\
-markselect=red,gray:\
+selected=red,gray:\
+marked=black,yellow:\
+markselect=red,yellow:\
 `# File types `\
 directory=white,default:\
 executable=white,default:\
@@ -20,6 +20,7 @@ dhotfocus=yellow,gray:\
 errdhotnormal=red,blue:\
 errdhotfocus=red,blue:\
 `# User menu `\
+menu=black,cyan:\
 menunormal=black,cyan:\
 menuinactive=black,cyan:\
 menuhot=black,blue:\
@@ -36,6 +37,10 @@ viewnormal=white,default:\
 viewbold=red,default:\
 viewunderline=blue,default:\
 viewselected=yellow,gray:\
+`# Popup menu `\
+pmenunormal=black,cyan:\
+pmenusel=black,blue:\
+pmenutitle=black,blue:\
 `# Global settings `\
 reverse=cyan,default:\
 gauge=green,default:\
