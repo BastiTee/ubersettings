@@ -26,7 +26,13 @@ set tabstop=4
 syntax on
 
 "Maps command 'Run the current script' to F9
-nnoremap <F9> :!%:p
+:map <F9> :!%:p<CR>
+
+"Keymap - F7 previous tab
+:map <F7> :tabp<CR>
+
+"Keymap - F8 next tab
+:map <F8> :tabn<CR> 
 
 "Required for http://eclim.org/install.html
 filetype plugin indent on
