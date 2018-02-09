@@ -1,3 +1,6 @@
+# Always force bash
+shell "/bin/bash"
+
 # No startup message when starting screen
 startup_message off
 
@@ -11,11 +14,11 @@ defscrollback 10000
 # <http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html>
 caption always "%S | %w | %H |"
 
-# Bind F1 / F2 to toggle through windows
+# Bind Alt+a Alt+d to toggle through windows
 bindkey ^[a prev
 bindkey ^[d next
 
-# Bind F3 / F4 to toggle through tabs
+# Bind Alt+w Alt+s to toggle through tabs
 bindkey ^[w focus prev
 bindkey ^[s focus next
 
