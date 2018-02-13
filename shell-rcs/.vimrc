@@ -25,8 +25,8 @@ set tabstop=4
 "Syntax highlighting enables Vim to show parts of the text in another font or color
 syntax on
 
-"Maps command 'Run the current script' to F9
-:map <F9> :!%:p<CR>
+"Maps command 'Save and run the current script' to F9
+:map <F9> :w<CR>:!%:p<CR>
 
 "Keymap - F7 previous tab
 :map <F7> :tabp<CR>
