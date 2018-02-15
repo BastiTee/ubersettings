@@ -1,7 +1,8 @@
 "Making vim either more vi-compatible or more useful
 set nocompatible
 
-"If you write to an existing file (but do not append) while the 'backup', 'writebackup' or 'patchmode' option is on, a backup of the original file is made
+"If you write to an existing file (but do not append) while the 'backup', 
+"'writebackup' option is on, a backup of the original file is made
 set nobackup
 
 "Make a backup before overwriting a file
@@ -31,7 +32,7 @@ set softtabstop=0
 set shiftwidth=4 
 
 "When on, a <Tab> in front of a line inserts blanks according to
-"'shiftwidth'.  'tabstop' or 'softtabstop' is used in other places.
+"'shiftwidth'. 'tabstop' or 'softtabstop' is used in other places.
 set smarttab
 
 "Wrap lines with more than <N> characters on whitespace.
@@ -40,7 +41,8 @@ set textwidth=80
 "Create a highlight column after textwidth
 set colorcolumn=+1
 
-"Syntax highlighting enables Vim to show parts of the text in another font or color
+"Syntax highlighting enables Vim to show parts of the text in 
+"another font or color
 syntax on
 
 "Maps command 'Save and run the current script' to F9
