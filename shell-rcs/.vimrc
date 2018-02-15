@@ -22,6 +22,24 @@ set expandtab
 "Number of spaces that a <Tab> in the file counts for
 set tabstop=4
 
+"Number of spaces that a <Tab> counts for while performing editing operations
+set softtabstop=0 
+
+"The size of an "indent". It's also measured in spaces, so if your code base
+"indents with tab characters then you want shiftwidth to equal the number of
+"tab characters times tabstop.
+set shiftwidth=4 
+
+"When on, a <Tab> in front of a line inserts blanks according to
+"'shiftwidth'.  'tabstop' or 'softtabstop' is used in other places.
+set smarttab
+
+"Wrap lines with more than <N> characters on whitespace.
+set textwidth=80
+
+"Create a highlight column after textwidth
+set colorcolumn=+1
+
 "Syntax highlighting enables Vim to show parts of the text in another font or color
 syntax on
 
