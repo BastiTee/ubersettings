@@ -1,5 +1,4 @@
 !--------------------------------------------------
-! BASTIS XTERM SETTINGS 
 ! IN UBUNTU ACTIVATE BY:
 !    xrdb -merge ~/.Xresources && xterm
 !--------------------------------------------------
@@ -95,4 +94,3 @@ XTerm*colorUL        : _colorUL
 XTerm*foreground     : _foreground
 XTerm*background     : _background
 XTerm*cursorColor    : _cursorColor
-

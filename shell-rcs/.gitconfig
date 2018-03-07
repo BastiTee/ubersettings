@@ -1,7 +1,3 @@
-; BASTI's .GITCONFIG
-; ==================
-; Reminder: Don't use global user, when using multiple git accounts
-
 [push]
 	default = matching
 
