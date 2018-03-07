@@ -1,7 +1,7 @@
 "Making vim either more vi-compatible or more useful
 set nocompatible
 
-"If you write to an existing file (but do not append) while the 'backup', 
+"If you write to an existing file (but do not append) while the 'backup',
 "'writebackup' option is on, a backup of the original file is made
 set nobackup
 
@@ -24,24 +24,25 @@ set expandtab
 set tabstop=4
 
 "Number of spaces that a <Tab> counts for while performing editing operations
-set softtabstop=0 
+set softtabstop=0
 
 "The size of an "indent". It's also measured in spaces, so if your code base
 "indents with tab characters then you want shiftwidth to equal the number of
 "tab characters times tabstop.
-set shiftwidth=4 
+set shiftwidth=4
 
 "When on, a <Tab> in front of a line inserts blanks according to
 "'shiftwidth'. 'tabstop' or 'softtabstop' is used in other places.
 set smarttab
 
 "Wrap lines with more than <N> characters on whitespace.
+"See http://vim.wikia.com/wiki/Automatic_word_wrapping
 set textwidth=80
 
 "Create a highlight column after textwidth
 set colorcolumn=+1
 
-"Syntax highlighting enables Vim to show parts of the text in 
+"Syntax highlighting enables Vim to show parts of the text in
 "another font or color
 syntax on
 
@@ -52,7 +53,7 @@ syntax on
 :map <F7> :tabp<CR>
 
 "Keymap - F8 next tab
-:map <F8> :tabn<CR> 
+:map <F8> :tabn<CR>
 
 "Required for http://eclim.org/install.html
 filetype plugin indent on
