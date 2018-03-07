@@ -1,3 +1,6 @@
+"Make sure controls are xterm-compatible
+set term=xterm
+
 "Making vim either more vi-compatible or more useful
 set nocompatible
 
@@ -57,4 +60,3 @@ syntax on
 
 "Required for http://eclim.org/install.html
 filetype plugin indent on
-
