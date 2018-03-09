@@ -2,8 +2,8 @@
 
 # basic rc files
 cd $( dirname $( readlink -f $0 ))
-../mklinks.sh ".gitconfig .inputrc .screenrc .vimrc .Xresources" ~/
-if [ ! -z "$( uname -a | grep -i ubuntu)" ] && [ ! -z $( command -v xrdb ) ] 
+../mklinks.sh ".gitconfig .gitignore .inputrc .screenrc .vimrc .Xresources" ~/
+if [ ! -z "$( uname -a | grep -i ubuntu)" ] && [ ! -z $( command -v xrdb ) ]
 then
     xrdb ~/.Xresources
 fi
@@ -17,4 +17,3 @@ mkdir -p $apphome
 apphome="$( readlink -f ~ )/.config/profanity"
 mkdir -p $apphome
 ../mklinks.sh "profrc" $apphome
-

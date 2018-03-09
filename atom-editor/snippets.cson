@@ -14,7 +14,7 @@
 '.source.js':
     'd3.js - attr':
         'prefix': 'attr'
-        'body': '.attr("$1", "$2")$3'
+        'body': '.attr(\'$1\', \'$2\')$3'
     'd3.js - getter':
         'prefix': 'getter'
         'body': 'chart.$1 = function(value) {\n\tif (!arguments.length) return $1\n\t$1 = value;\n\treturn chart;\n}'

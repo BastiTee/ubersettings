@@ -5,7 +5,11 @@
 
 sudo echo # to prompt immediately
 
-SYS_PACKAGES="\
+dist=$( grep "DISTRIB_ID" /etc/lsb-release | tr "=" " " | awk '{print $2}' |\
+tr "[:upper:]" "[:lower:]" )
+echo ">> running: $dist"
+
+SYS_PACKAGES_UBUNTU="\
 moreutils \
 python3 \
 python3-pip \
@@ -14,6 +18,15 @@ hunspell \
 hunspell-de-de \
 hunspell-en-gb \
 hunspell-en-us \
+"
+
+SYS_PACKAGES_MANJARO="\
+moreutils \
+python3 \
+`# Spell checking package` \
+hunspell \
+hunspell-de \
+hunspell-en \
 "
 
 ATOM_PACKAGES="\
@@ -45,22 +58,14 @@ zentabs \
 intentions \
 `# Easy to use API to show your package is performing a task` \
 busy-signal \
-`# A Base Linter with Cow Powers` \
-linter \
-`# Default UI for the Linter package` \
-linter-ui-default \
-`# Linter for Python / flake8` \
-linter-flake8 \
-`# Linter for ecma script` \
-linter-eslint \
 `# ----- IDE FEATURES -----`
 `# A collection of Atom UIs to support language services` \
 atom-ide-ui \
-`# TypeScript and JavaScript language support for Atom-IDE` \
+`# TypeScript and JavaScript language support` \
 ide-typescript \
-`# Python language support for Atom-IDE` \
+`# Python language support` \
 ide-python \
-`# Java language support for Atom-IDE` \
+`# Java language support` \
 ide-java \
 `# Docker language support` \
 language-docker \
@@ -80,27 +85,37 @@ python-language-server \
 "
 
 echo "++ updating atom"
-dl_link=$( curl -s https://atom.io/download/deb |\
-sed -e "s/.*href=\"//" -e "s/\".*/\n/" -e "s/?.*/\n/" )
-version_remote=$( echo $dl_link | sed -e "s/.*\/v//" -e "s/\/.*//" )
-version_local=$( atom --version | head -n1 | awk '{ print $3}' )
-echo "   dl-link: $dl_link"
-echo "   dl-vers: $version_remote"
-echo "   lo-vers: $version_local"
-# version_local="1.0.0"
-if [ "$version_local" == "$version_remote" ]
-then
-    echo "   -- atom up-to-date"
+if [ "$dist" == "manjarolinux" ]; then
+  sudo yaourt -Syu --noconfirm --needed atom
 else
-    echo "   -- newer version available"
-    curl -L https://atom.io/download/deb --output /tmp/atom.deb
-    sudo apt install /tmp/atom.deb
-    rm -f /tmp/atom.deb
+  dl_link=$( curl -s https://atom.io/download/deb |\
+  sed -e "s/.*href=\"//" -e "s/\".*/\n/" -e "s/?.*/\n/" )
+  version_remote=$( echo $dl_link | sed -e "s/.*\/v//" -e "s/\/.*//" )
+  version_local=$( atom --version | head -n1 | awk '{ print $3}' )
+  echo "   dl-link: $dl_link"
+  echo "   dl-vers: $version_remote"
+  echo "   lo-vers: $version_local"
+  # version_local="1.0.0"
+  if [ "$version_local" == "$version_remote" ]
+  then
+      echo "   -- atom up-to-date"
+  else
+      echo "   -- newer version available"
+      curl -L https://atom.io/download/deb --output /tmp/atom.deb
+      sudo apt install /tmp/atom.deb
+      rm -f /tmp/atom.deb
+  fi
 fi
 
 echo "++ installing system dependencies"
-sudo apt update && \
-sudo apt install -y $SYS_PACKAGES
+if [ "$dist" == "manjarolinux" ]; then
+  sudo pacman -Syu --needed --noconfirm $SYS_PACKAGES_MANJARO
+  wget https://bootstrap.pypa.io/get-pip.py
+  sudo python3 get-pip.py
+  rm get-pip.py
+else
+  sudo apt update && sudo apt install -y $SYS_PACKAGES_UBUNTU
+fi
 sudo -H python3 -m pip install $PY_PACKAGES
 
 for tool in atom apm pip3; do
