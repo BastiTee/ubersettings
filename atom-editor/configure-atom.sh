@@ -5,9 +5,18 @@
 
 sudo echo # to prompt immediately
 
-dist=$( grep "DISTRIB_ID" /etc/lsb-release | tr "=" " " | awk '{print $2}' |\
-tr "[:upper:]" "[:lower:]" )
+dist=$( grep "DISTRIB_ID" /etc/lsb-release 2> /dev/null | tr "=" " " |\
+awk '{print $2}' | tr "[:upper:]" "[:lower:]" )
+[ -z "$dist" ] && dist="mac"
 echo ">> running: $dist"
+
+SYS_PACKAGES_MAC="\
+moreutils \
+python3 \
+wget \
+`# Spell checking package` \
+hunspell
+"
 
 SYS_PACKAGES_UBUNTU="\
 moreutils \
@@ -87,7 +96,7 @@ python-language-server \
 echo "++ updating atom"
 if [ "$dist" == "manjarolinux" ]; then
   sudo yaourt -Syu --noconfirm --needed atom
-else
+elif [ "$dist" == "ubuntu" ]; then
   dl_link=$( curl -s https://atom.io/download/deb |\
   sed -e "s/.*href=\"//" -e "s/\".*/\n/" -e "s/?.*/\n/" )
   version_remote=$( echo $dl_link | sed -e "s/.*\/v//" -e "s/\/.*//" )
@@ -113,8 +122,13 @@ if [ "$dist" == "manjarolinux" ]; then
   wget https://bootstrap.pypa.io/get-pip.py
   sudo python3 get-pip.py
   rm get-pip.py
-else
+elif [ "$dist" == "ubuntu" ]; then
   sudo apt update && sudo apt install -y $SYS_PACKAGES_UBUNTU
+elif [ "$dist" == "mac" ]; then
+   brew install $SYS_PACKAGES_MAC
+   wget https://bootstrap.pypa.io/get-pip.py
+   sudo python3 get-pip.py
+   rm get-pip.py
 fi
 sudo -H python3 -m pip install $PY_PACKAGES
 
@@ -134,22 +148,24 @@ for atom_package in $ATOM_PACKAGES; do
     }
 done
 
-echo "++ fix hunspell dictionaries"
-tmpf=$( mktemp )
-cat << EOF > $tmpf
-cd /usr/share/hunspell
-file * | grep "ISO-8859 text" | grep -v ".old" | cut -d":" -f1 |\
-while read file; do
-    iconv -f "iso-8859-1" -t "utf-8" \$file > \${file}.2
-    [ ! -f \${file}.old ] && mv \${file} \${file}.old
-    mv \${file}.2 \${file}
-done
-echo "---"
-file *
+if [ "$dist" != "mac" ]; then
+  echo "++ fix hunspell dictionaries"
+  tmpf=$( mktemp )
+  cat << EOF > $tmpf
+  cd /usr/share/hunspell
+  file * | grep "ISO-8859 text" | grep -v ".old" | cut -d":" -f1 |\
+  while read file; do
+      iconv -f "iso-8859-1" -t "utf-8" \$file > \${file}.2
+      [ ! -f \${file}.old ] && mv \${file} \${file}.old
+      mv \${file}.2 \${file}
+  done
+  echo "---"
+  file *
 EOF
-chmod a+x $tmpf
-sudo $tmpf
-rm $tmpf
+  chmod a+x $tmpf
+  sudo $tmpf
+  rm $tmpf
+fi
 
 echo "++ uninstalling experimental apm-packages"
 uninstall_list=""

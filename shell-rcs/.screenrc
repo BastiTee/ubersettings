@@ -22,9 +22,4 @@ bindkey ^[d next
 bindkey ^[w focus prev
 bindkey ^[s focus next
 
-# Sourcing existing screen layouts
-# https://superuser.com/a/963169
-source .screen_layout
-layout save def
-
 # -- fin.
