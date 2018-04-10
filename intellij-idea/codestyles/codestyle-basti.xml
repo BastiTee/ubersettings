@@ -5,23 +5,6 @@
   <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
     <value />
   </option>
-  <option name="IMPORT_LAYOUT_TABLE">
-    <value>
-      <package name="com.scopevisio" withSubpackages="true" static="true" />
-      <package name="" withSubpackages="true" static="true" />
-      <emptyLine />
-      <package name="java" withSubpackages="true" static="false" />
-      <emptyLine />
-      <package name="javax" withSubpackages="true" static="false" />
-      <emptyLine />
-      <package name="org" withSubpackages="true" static="false" />
-      <emptyLine />
-      <package name="com.scopevisio" withSubpackages="true" static="false" />
-      <emptyLine />
-      <package name="" withSubpackages="true" static="false" />
-      <emptyLine />
-    </value>
-  </option>
   <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="true" />
   <option name="FORMATTER_TAGS_ENABLED" value="true" />
   <codeStyleSettings language="JAVA">

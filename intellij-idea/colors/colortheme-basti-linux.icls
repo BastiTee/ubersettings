@@ -1,9 +1,4 @@
 <scheme name="Basti" version="142" parent_scheme="Darcula">
-  <option name="FONT_SCALE" value="1.0833334" />
-  <option name="EDITOR_FONT_SIZE" value="15" />
-  <option name="CONSOLE_FONT_NAME" value="Ubuntu Mono" />
-  <option name="CONSOLE_FONT_SIZE" value="13" />
-  <option name="EDITOR_FONT_NAME" value="Ubuntu Mono" />
   <attributes>
     <option name="ANNOTATION_NAME_ATTRIBUTES">
       <value>
@@ -76,7 +71,6 @@
     <option name="DEFAULT_KEYWORD">
       <value>
         <option name="FOREGROUND" value="d78787" />
-        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">
@@ -97,7 +91,6 @@
     <option name="DEFAULT_STATIC_FIELD">
       <value>
         <option name="FOREGROUND" value="87afdf" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_STATIC_METHOD">
