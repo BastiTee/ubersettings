@@ -57,6 +57,3 @@ syntax on
 
 "Keymap - F8 next tab
 :map <F8> :tabn<CR>
-
-"Required for http://eclim.org/install.html
-filetype plugin indent on
