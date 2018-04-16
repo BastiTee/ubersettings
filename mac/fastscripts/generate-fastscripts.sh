@@ -5,19 +5,23 @@ rm -rf gen
 mkdir -p gen
 tools="\
 Finder \
-Chrome \
+Google_Chrome \
 Terminal \
 Atom \
 IntelliJ_IDEA \
+Visual_Studio_Code \
 Microsoft_Outlook \
 Slack \
-MacPass \
 Firefox \
 Spotify \
 "
 
+i=1
 for tool in $tools; do
-  trg=$( realpath "gen/Focus_$( sed -e "s/ /_/g" <<< ${tool} ).applescript" )
+  pad=$( printf "%02g" $i )
+  i=$(( $i + 1 ))
+  trg=$( realpath "gen/Focus_${pad}_$( sed -e "s/ /_/g" \
+  <<< ${tool} ).applescript" )
   bn=$( basename $trg )
   tool_ws=$( sed -e "s/_/ /g" <<< $tool )
   echo "-- '$tool_ws' > $trg ($bn)"
