@@ -153,10 +153,16 @@
 	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>Bell</key>
+	<false/>
 	<key>BlinkText</key>
 	<false/>
+	<key>CommandString</key>
+	<string>/Users/sebastiantschoepel/dev/github/bastis-bash-commons/bbc-screen dev2</string>
 	<key>CursorBlink</key>
 	<true/>
+	<key>CursorType</key>
+	<integer>2</integer>
 	<key>DisableANSIColor</key>
 	<false/>
 	<key>Font</key>
@@ -174,6 +180,10 @@
 	<real>1.004032258064516</real>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0499999999999998</real>
+	<key>RunCommandAsShell</key>
+	<false/>
+	<key>ShouldRestoreContent</key>
+	<false/>
 	<key>ShowActiveProcessInTabTitle</key>
 	<true/>
 	<key>ShowActiveProcessInTitle</key>
@@ -190,6 +200,8 @@
 	<false/>
 	<key>ShowTerminalInDockIcon</key>
 	<true/>
+	<key>ShowWindowSettingsNameInTitle</key>
+	<false/>
 	<key>TextBoldColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -210,6 +222,8 @@
 	<false/>
 	<key>UseBrightBold</key>
 	<true/>
+	<key>VisualBell</key>
+	<false/>
 	<key>WindowTitle</key>
 	<string>Terminal</string>
 	<key>columnCount</key>
