@@ -6,7 +6,7 @@
 	filemode = false
 	autocrlf = false
 	editor = vim
-	excludesfile = /Users/sebastiantschoepel/.gitignore
+	excludesfile = ~/.gitignore
 
 [http]
 	sslverify = false
