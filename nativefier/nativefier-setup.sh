@@ -1,13 +1,16 @@
 #!/bin/bash
-cd "$( dirname "$( readlink -f "$0" )" )"
+cd "$( dirname "$( realpath "$0" )" )"
 [ -z $( command -v nativefier ) ] && sudo npm install -g nativefier
 [ $( hostname ) == "zenbook" ] && defaults="$defaults --zoom 1.5"
+create_link=1
+[ $( uname |tr "[:upper:]" "[:lower:]" ) == "darwin" ] && create_link=
 
 #------------------------------------------------------------------------------
 # HELPER
 #------------------------------------------------------------------------------
 
 function desktop_link () {
+    if [ -z "$create_link" ]; then return; fi
     trg=~/.local/share/applications/nativefier_${1}.desktop
 cat << EOF > $trg
 [Desktop Entry]
@@ -15,8 +18,8 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 Name=$1
-Icon=$( dirname $( readlink -f $2 ) )/resources/app/icon.png
-Exec=$( readlink -f $2 )
+Icon=$( dirname $( realpath $2 ) )/resources/app/icon.png
+Exec=$( realpath $2 )
 StartupWMClass=$1
 EOF
     chmod 755 $trg
@@ -50,9 +53,6 @@ then
 fi
 
 # otherwise run standards
-
 run_nativefier https://wunderlist.com/de/\#/lists/inbox wunderlist
-
 run_nativefier https://twitter.com/ twitter
-
 run_nativefier https://keep.google.com keep

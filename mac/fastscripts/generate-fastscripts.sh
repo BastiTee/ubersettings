@@ -13,7 +13,7 @@ Visual_Studio_Code \
 Microsoft_Outlook \
 Slack \
 Firefox \
-Spotify \
+Pivotal \
 "
 
 i=1
