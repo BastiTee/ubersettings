@@ -8,7 +8,7 @@ Finder \
 Google_Chrome \
 Terminal \
 Atom \
-IntelliJ_IDEA \
+IntelliJ_IDEA_CE \
 Visual_Studio_Code \
 Microsoft_Outlook \
 Slack \
