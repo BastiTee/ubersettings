@@ -25,7 +25,6 @@ bindkey ∂ next
 # bindkey ^[w focus prev
 # bindkey ^[s focus next
 # ... mac machines (option+..)
-bindkey ∑ focus prev
 bindkey ‚ focus next
 
 # -- fin.
