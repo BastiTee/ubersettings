@@ -14,12 +14,18 @@ defscrollback 10000
 # <http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html>
 caption always "%S | %w | %H |"
 
-# Bind Alt+a Alt+d to toggle through windows
-bindkey ^[a prev
-bindkey ^[d next
+# Bind Alt+a Alt+d to toggle through windows (linux machines)
+# bindkey ^[a prev
+# bindkey ^[d next
+# ... mac machines (option+..)
+bindkey å prev
+bindkey ∂ next
 
 # Bind Alt+w Alt+s to toggle through tabs
-bindkey ^[w focus prev
-bindkey ^[s focus next
+# bindkey ^[w focus prev
+# bindkey ^[s focus next
+# ... mac machines (option+..)
+bindkey ∑ focus prev
+bindkey ‚ focus next
 
 # -- fin.
