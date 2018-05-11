@@ -1,0 +1,8 @@
+<application>
+  <component name="UISettings">
+    <option name="FONT_SCALE" value="1.25" />
+    <option name="SHOW_EDITOR_TOOLTIP" value="false" />
+    <option name="SHOW_MEMORY_INDICATOR" value="true" />
+    <option name="SHOW_TOOL_WINDOW_NUMBERS" value="false" />
+  </component>
+</application>
