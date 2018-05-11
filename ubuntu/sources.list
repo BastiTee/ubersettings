@@ -1,21 +1,18 @@
 # Ubuntu 17.10 Artful Aardvark base repositories
-deb http://de.archive.ubuntu.com/ubuntu/ artful main restricted universe multiverse
-deb http://de.archive.ubuntu.com/ubuntu/ artful-updates main restricted universe multiverse
-deb http://de.archive.ubuntu.com/ubuntu/ artful-backports main restricted universe multiverse
+deb http://de.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse
+deb http://de.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://de.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
 
 # Ubuntu 17.10 Artful Aardvark partner repositories
-deb http://archive.canonical.com/ubuntu artful partner
+deb http://archive.canonical.com/ubuntu bionic partner
 
 # Ubuntu 17.10 Artful Aardvark security repositories
-deb http://security.ubuntu.com/ubuntu artful-security main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu bionic-security main restricted universe multiverse
 
 # User-level applications
 deb http://apt.insynchq.com/ubuntu xenial non-free contrib
 deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_16.04/ /
-# deb http://ppa.launchpad.net/peek-developers/stable/ubuntu xenial main
-deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
-# deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+deb http://ppa.launchpad.net/peek-developers/stable/ubuntu bionic main
+deb [arch=amd64] https://updates.signal.org/desktop/apt artful main
 deb http://repository.spotify.com stable non-free
 
-# Customizations 
-deb http://ppa.launchpad.net/numix/ppa/ubuntu xenial main
