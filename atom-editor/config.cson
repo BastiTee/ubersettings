@@ -30,10 +30,11 @@
     ]
     telemetryConsent: "limited"
     themes: [
-      "atom-dark-ui"
-      "nord-atom-syntax"
+      "atom-light-ui"
+      "atom-light-syntax"
     ]
   editor:
+    fontSize: 21
     scrollSensitivity: 90
     softWrap: true
     softWrapAtPreferredLineLength: true
