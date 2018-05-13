@@ -33,4 +33,4 @@ mkdir -vp ${ideapath}/keymaps
 src="keymaps/keymap-basti.xml"
 [ "$( hostname )" == "zenbook" ] && src="keymaps/keymap-basti-zenbook.xml"
 rm -vf ${ideapath}/keymaps/keymap-basti.xml
-ln -vs $src ${ideapath}/keymaps/keymap-basti.xml
+ln -vs $( realpath $src ) ${ideapath}/keymaps/keymap-basti.xml

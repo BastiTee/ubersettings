@@ -8,6 +8,12 @@
   <action id="CommentByLineComment">
     <keyboard-shortcut first-keystroke="shift ctrl number_sign" />
   </action>
+  <action id="CompileDirty">
+    <keyboard-shortcut first-keystroke="ctrl s" />
+  </action>
+  <action id="Debugger.ViewText">
+    <keyboard-shortcut first-keystroke="alt t" />
+  </action>
   <action id="EditorLookupDown" />
   <action id="EditorLookupUp" />
   <action id="EditorScrollDown" />
@@ -29,10 +35,8 @@
   <action id="ToggleBookmark7" />
   <action id="ToggleBookmark8" />
   <action id="ToggleBookmark9" />
-  <action id="ToggleFullScreen">
-    <keyboard-shortcut first-keystroke="f11" />
-  </action>
-  <action id="ToggleMainMenuAction">
+  <action id="Vcs.UpdateProject" />
+  <action id="XDebugger.MuteBreakpoints">
     <keyboard-shortcut first-keystroke="f10" />
   </action>
 </keymap>
