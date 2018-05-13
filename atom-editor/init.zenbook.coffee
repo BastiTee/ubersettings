@@ -1,3 +1,2 @@
 # Your init script
-atom.config.set('editor.fontSize', '20');
-
+# atom.config.set('editor.fontSize', '20');
