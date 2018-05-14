@@ -3,10 +3,10 @@
     <keyboard-shortcut first-keystroke="alt left" />
   </action>
   <action id="CommentByBlockComment">
-    <keyboard-shortcut first-keystroke="ctrl number_sign" />
+    <keyboard-shortcut first-keystroke="shift ctrl number_sign" />
   </action>
   <action id="CommentByLineComment">
-    <keyboard-shortcut first-keystroke="shift ctrl number_sign" />
+    <keyboard-shortcut first-keystroke="ctrl number_sign" />
   </action>
   <action id="CompileDirty">
     <keyboard-shortcut first-keystroke="ctrl s" />
