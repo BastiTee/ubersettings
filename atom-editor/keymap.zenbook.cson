@@ -32,3 +32,10 @@
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
 # Fixes for package <last-cursor-position>
+
+'atom-workspace atom-text-editor':
+    'alt-left': 'last-cursor-position:previous'
+    'alt-right': 'last-cursor-position:next'
+    'alt-t': 'atom-ide-terminal:toggle-terminal-focus'
+'.terminal-pane':
+    'alt-t': 'atom-ide-terminal:toggle-terminal-focus'

@@ -94,9 +94,7 @@ python-language-server \
 "
 
 echo "++ updating atom"
-if [ "$dist" == "manjarolinux" ]; then
-  sudo yaourt -Syu --noconfirm --needed atom
-elif [ "$dist" == "ubuntu" ]; then
+if [ "$dist" == "ubuntu" ]; then
   dl_link=$( curl -s https://atom.io/download/deb |\
   sed -e "s/.*href=\"//" -e "s/\".*/\n/" -e "s/?.*/\n/" )
   version_remote=$( echo $dl_link | sed -e "s/.*\/v//" -e "s/\/.*//" )
@@ -114,6 +112,8 @@ elif [ "$dist" == "ubuntu" ]; then
       sudo apt install /tmp/atom.deb
       rm -f /tmp/atom.deb
   fi
+else
+  echo "On Mac only manual Atom updates are supported."
 fi
 
 echo "++ installing system dependencies"
@@ -182,3 +182,6 @@ echo "++ packages: $uninstall_list"
 
 echo "++ upgrading apm-packages"
 apm upgrade --no-confirm
+
+cd $( dirname $( realpath $0 ))
+ls

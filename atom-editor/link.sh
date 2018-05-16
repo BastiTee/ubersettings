@@ -1,26 +1,21 @@
 #!/bin/bash
-cd $( dirname $( readlink -f $0 ))
 
 function link() {
     rm -vf "$2"
     ln -vs "$(pwd)/$1" "$2"
 }
 
+here="$( dirname $( realpath $0 ))"
 target=~/.atom
-hn=$( hostname )
 mkdir -vp ${target}
 
+[ $( hostname ) == "zenbook" ] && rd=".zenbook" || rd=""
+
 # defaults
-link keymap.cson ${target}/keymap.cson
-link snippets.cson ${target}/snippets.cson
-link config.cson ${target}/config.cson
+link ${here}/keymap${rd}.cson ${target}/keymap.cson
+link ${here}/snippets.cson ${target}/snippets.cson
+link ${here}/config.cson ${target}/config.cson
+link ${here}/init.coffee ${target}/init.coffee
+link ${here}/styles.less ${target}/styles.less
 
-# machine-specific
-[ $hn == "zenbook" ] && config="init.zenbook.coffee" || config="init.coffee"
-link $config ${target}/init.coffee
-
-[ $hn == "zenbook" ] && config="styles.zenbook.less" || config="styles.less"
-link $config ${target}/styles.less
-
-#
-ls -l ~/.atom
+ls -l ${target}
