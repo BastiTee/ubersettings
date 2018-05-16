@@ -31,11 +31,10 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
-# Fixes for package <last-cursor-position>
-
 'atom-workspace atom-text-editor':
     'cmd-left': 'last-cursor-position:previous'
     'cmd-right': 'last-cursor-position:next'
+    'cmd-#': 'editor:toggle-line-comments'
     'alt-t': 'atom-ide-terminal:toggle-terminal-focus'
-'.terminal-pane':
+ '.terminal-pane':
     'alt-t': 'atom-ide-terminal:toggle-terminal-focus'

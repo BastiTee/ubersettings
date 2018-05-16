@@ -34,7 +34,6 @@
       "atom-light-syntax"
     ]
   editor:
-    fontSize: 21
     scrollSensitivity: 90
     softWrap: true
     softWrapAtPreferredLineLength: true
