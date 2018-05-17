@@ -12,6 +12,7 @@ fi
 apphome="$( realpath ~ )/.config/mc"
 mkdir -p $apphome
 ../mklinks.sh "ini" $apphome
+../mklinks.sh "ini.theme" $apphome
 
 # profanity cmd-line jabber
 apphome="$( realpath ~ )/.config/profanity"
