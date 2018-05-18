@@ -1,2 +1,2 @@
 # Your init script
-# atom.config.set('editor.fontSize', '14');
+require('web-frame').setZoomFactor(1.4)
