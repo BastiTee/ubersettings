@@ -1,5 +1,5 @@
 [skin]
-    description = Solarized (mostly) dark skin for Midnight Commander.
+    description = Light skin for Midnight Commander.
 
 [Lines]
     horiz = ─
@@ -25,92 +25,83 @@
     drightmiddle = ╢
 
 [core]
-# Panes.
-    _default_ = default;default               ;; Default file colors/background.
-    selected = default;default                 ;; Color while hovering above a file/directory.
-    marked  = white;brightmagenta         ;; Marked line (using select - insert, ctrl-t, etc...)
-    markselect = red;cyan                 ;; Marked and selected.
-    header = default                        ;; Pane header (name,size,date titles).
-    reverse = white;brightmagenta         ;; The direcotry PWD above the header, in focused pane.
+    _default_ = default;default
+    selected = white;blue
+    marked  = white;cyan
+    markselect = blue;cyan
+    header = default
+    reverse = white;blue
 
-# Input fields.
-    inputunchanged = lightgray;black      ;; Input fields colors.
-    input = white;black                   ;; Input fields, modified.
-    inputhistory = red;lightgray          ;; Input history controller.
-    inputmark = black;brightred           ;; Input field marked text, if any.
-    disabled = brightcyan;lightgray       ;; Disabled input fields in dialog boxes.
-    gauge = magenta;blue                  ;; Progress bars (while copying etc). TODO: What the text stands for?!
+    inputunchanged = white;cyan
+    input = white;cyan
+    inputhistory = white;cyan
+    inputmark = white;cyan
+    disabled = default;blue
+    gauge = white;blue
 
-# Command line.
-	# TODO: Command prompt line colors. What are they?!
-    commandlinemark = black;brightred     ;; Commandline marked text, if any.
-    commandhistory = red;brightblack      ;; Command prompt history controller.
-
-	# TODO: What these stand for?
-    errors = black;green
-    statusbar = black;green
+    commandlinemark = black;blue
+    commandhistory = blue;brightblack
+    errors = black;blue
+    statusbar = black;blue
 
 [popup]
-	# TODO: Probably user menu, screenlist, encoding, etc...
-    pmenunormal = black;green
-    pmenusel = black;green
-    pmenutitle = black;green
+    pmenunormal = default;blue
+    pmenusel = default;blue
+    pmenutitle = default;blue
 
 [dialog]
-    _default_ = black;lightgray           ;; Default colors of dialogs (e.g. copy dialog).
-    dfocus = black;green                  ;; Controller colors (checkboxes, actions) in focus.
-    dhotnormal = red                      ;; Controllers hotkey color.
-    dhotfocus = red;green                 ;; Controllers hotkey color in focus.
-    dtitle = white;brightmagenta          ;; Dialog title.
+    _default_ = default;default
+    dfocus = white;blue
+    dhotnormal = white;cyan
+    dhotfocus = white;cyan
+    dtitle = white;blue
 
 [error]
-    _default_ = black;lightgray           ;; Default colors of error dialogs (e.g. overwrite permission).
-    errdfocus = black;green               ;; Controller colors (checkboxes, actions) in focus.
-    errdhotnormal = red                   ;; Controllers hotkey color.
-    errdhotfocus = red;green              ;; Controllers hotkey color in focus.
-    errdtitle = white;red                 ;; Error dialog title.
+    _default_ = default;default
+    errdfocus = white;red
+    errdhotnormal = white;magenta
+    errdhotfocus = white;magenta
+    errdtitle = white;red
 
 [filehighlight]
-# View filehighlight.ini as reference.
-    directory = cyan;black                ;; Directories.
-    executable = brightred;black          ;; Executable files.
-    symlink = magenta;black               ;; Symbolic links.
-    stalelink = lightgray;black           ;; Broken links.
-    device = red;blueblack                ;; An interface for a device driver.
-    special = black;blueblack             ;; Pipes (FIFOs), sockets, block files, character files etc...
-    core = brightcyan;black               ;; Core dump files, etc?...
-    temp = brightgreen;black              ;; Bak, Temp, ~, etc...
-    archive = brightmagenta;black         ;; Archives.
-    source = green;black                  ;; Source files.
-    media = brown;black                   ;; Interactive media.
-    graph = blue;black                    ;; Images, in other words.
-    database = brightgreen;black          ;; DataBases, duh.
-    doc = red;black                       ;; Documents, duh.
+    directory = blue;default
+    executable = default;default
+    symlink = magenta;default
+    stalelink = red;default
+    device = default;blueblack
+    special = default;blueblack
+    core = default;default
+    temp = default;default
+    archive = default;default
+    source = default;default
+    media = default;default
+    graph = default;default
+    database = default;default
+    doc = default;default
 
 [menu]
-    _default_ = white;blue           ;; Default colors for menu while active.
-    menuinactive = white;blue        ;; Colors for menu while inactive.
-    menuhot = white;cyan                         ;; Menu item hotkey.
-    menusel = white;cyan                 ;; Selected menu item.
-    menuhotsel = blue;white                ;; Selected menu item hotkey.
+    _default_ = white;blue
+    menuinactive = white;blue
+    menuhot = white;cyan
+    menusel = white;cyan
+    menuhotsel = blue;white
 
 [help]
-    _default_ = default;green           ;; Default help tooltip text color/background.
-    helpitalic = brightmagenta            ;; Help when italic.
-    helpbold = red                        ;; Help when bold.
-    helplink = cyan                       ;; Links insde help tooltip.
-    helpslink = green                     ;; Links insde help tooltip focused.
-    helptitle = white;brightmagenta       ;; Help title.
+    _default_ = default;default
+    helpitalic = blue
+    helpbold = red
+    helplink = cyan
+    helpslink = cyan
+    helptitle = white;blue
 
 [buttonbar]
-#Bottom button bar (copy,move, etc...)
     hotkey = blue;white
     button = white;blue
 
 [editor]
-	_default_ = lightgray;black
-	editbold = green;blue
-	editmarked = lightgray;green
+	_default_ = default;default
+	editbold = default;default
+	editmarked = default;default
 	editwhitespace = brightblue;blue
 	editlinestate = brightmagenta
 	bookmark = white;red
@@ -121,9 +112,9 @@
 	editframedrag = lightgray;black
 
 [viewer]
-	viewunderline = brighmagenta;black
-	viewbold = brighmagenta;black
-	viewselected = brighmagenta;black
+	viewunderline = blue;default
+	viewbold = blue;default
+	viewselected = blue;default
 
 [widget-common]
 	sort-sign-up = ↓
