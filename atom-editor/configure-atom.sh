@@ -62,6 +62,8 @@ pigments \
 atom-beautify \
 `# Keep the opened tabs amount below specified limit` \
 zentabs \
+`# Diffs text between two split panes` \
+split-diff \
 `# ----- LINTER FEATURES -----`
 `# Base package for showing intentions in Atom` \
 intentions \

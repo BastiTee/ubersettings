@@ -1,59 +1,20 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "0b9d45ea-caf7-4935-bcda-6173d6e52d6a"
-    java:
-      beautify_on_save: true
-    markdown: {}
-  "atom-ide-ui":
-    use:
-      "atom-ide-busy-signal": "default"
-      "atom-ide-code-actions": "default"
-      "atom-ide-code-format": "default"
-      "atom-ide-code-highlight": "default"
-      "atom-ide-console": "default"
-      "atom-ide-datatip": "default"
-      "atom-ide-definitions": "default"
-      "atom-ide-diagnostics": "default"
-      "atom-ide-diagnostics-ui": "never"
-      "atom-ide-find-references": "default"
-      "atom-ide-global": "default"
-      "atom-ide-outline-view": "default"
-      "atom-ide-signature-help": "default"
-      hyperclick: "default"
   core:
     audioBeep: false
-    autoHideMenuBar: true
     closeDeletedFileTabs: true
+    closeEmptyWindows: false
     disabledPackages: [
       "pigments"
     ]
     telemetryConsent: "limited"
     themes: [
-      "atom-light-ui"
-      "atom-light-syntax"
+      "one-light-ui"
+      "one-light-syntax"
     ]
   editor:
-    scrollSensitivity: 90
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
-  "exception-reporting":
-    userId: "218a10be-5595-445a-8933-1589c5dfa630"
-  "ide-java":
-    errors:
-      incompleteClasspathSeverity: "ignore"
-  linter:
-    disabledProviders: [
-      "ESLint"
-      "Flake8"
-    ]
-  "linter-ui-default":
-    panelHeight: 81
-  "markdown-preview":
-    liveUpdate: false
-  pigments:
-    notifyReloads: false
   "spell-check":
     addKnownWords: true
     knownWords: [
@@ -128,13 +89,5 @@
       "en-US"
       "en-GB"
     ]
-  "symbols-tree-view":
-    autoToggle: true
   welcome:
     showOnStartup: false
-  whitespace:
-    ensureSingleTrailingNewline: true
-  zentabs:
-    maximumOpenedTabs: 10
-    neverCloseNew: true
-    neverCloseUnsaved: true
