@@ -1,6 +1,8 @@
+
 "*":
   core:
     audioBeep: false
+    autoHideMenuBar: true
     closeDeletedFileTabs: true
     closeEmptyWindows: false
     disabledPackages: [
