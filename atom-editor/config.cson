@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      beautifyEntireFileOnSave: false
   core:
     audioBeep: false
     autoHideMenuBar: true
