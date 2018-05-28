@@ -9,7 +9,7 @@ here="$( dirname $( realpath $0 ))"
 target=~/.atom
 mkdir -vp ${target}
 
-[ $( hostname ) == "zenbook" ] && rd=".zenbook" || rd=""
+[ $( hostname ) == "zenbook" ] && rd=".zenbook" ||rd=""
 
 # defaults
 link ${here}/keymap${rd}.cson ${target}/keymap.cson
