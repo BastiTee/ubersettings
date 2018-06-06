@@ -4,3 +4,4 @@ nativefier/build
 arc-firefox-theme/
 mac/fastscripts/gen/
 .DS_Store
+config.cson.local
