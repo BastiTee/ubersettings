@@ -14,6 +14,12 @@
   <action id="Debugger.ViewText">
     <keyboard-shortcut first-keystroke="alt t" />
   </action>
+  <action id="EditorLineEnd">
+    <keyboard-shortcut first-keystroke="end" />
+  </action>
+  <action id="EditorLineStart">
+    <keyboard-shortcut first-keystroke="home" />
+  </action>
   <action id="EditorLookupDown" />
   <action id="EditorLookupUp" />
   <action id="EditorScrollDown" />
