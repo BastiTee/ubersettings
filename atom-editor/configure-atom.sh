@@ -60,8 +60,6 @@ minimap \
 pigments \
 `# Beautify HTML, CSS, JavaScript, Python and more in Atom` \
 atom-beautify \
-`# Keep the opened tabs amount below specified limit` \
-zentabs \
 `# Diffs text between two split panes` \
 split-diff \
 `# ----- LINTER FEATURES -----`
