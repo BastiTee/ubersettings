@@ -65,7 +65,7 @@
         'body': '#!/bin/bash\n\n'
     'Change to script folder':
         'prefix': 'cdhere'
-        'body': 'cd "$( dirname "$( readlink -f "\\$0" )" )"'
+        'body': 'script_path=$( cd "$( dirname "$0" )"; pwd )\ncd $script_path'
     'Check for input file':
         'prefix': 'infile'
         'body': '[ -z "\\$1" ] || [ ! -f "\\$1" ] && {\n\techo "No input file provided."\n\texit 1\n}'
