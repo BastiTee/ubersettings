@@ -2,6 +2,8 @@
   "atom-beautify":
     general:
       beautifyEntireFileOnSave: false
+    markdown:
+      default_beautifier: "Tidy Markdown"
   core:
     audioBeep: false
     autoHideMenuBar: true
@@ -19,5 +21,9 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
+  "markdown-preview":
+    breakOnSingleNewline: true
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
