@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $( dirname $( realpath $0 ))
+cd $( cd "$( dirname "$0" )"; pwd )
 
 # Lookup configuration folder
 if [ "$( hostname )" == "zenbook" ]; then
@@ -33,4 +33,5 @@ mkdir -vp ${ideapath}/keymaps
 src="keymaps/keymap-basti.xml"
 [ "$( hostname )" == "zenbook" ] && src="keymaps/keymap-basti-zenbook.xml"
 rm -vf ${ideapath}/keymaps/keymap-basti.xml
-ln -vs $( realpath $src ) ${ideapath}/keymaps/keymap-basti.xml
+ln -vs $( cd "$( dirname "$src" )"; pwd )/$( basename $src ) \
+${ideapath}/keymaps/keymap-basti.xml

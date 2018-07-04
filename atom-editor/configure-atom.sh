@@ -183,5 +183,5 @@ echo "++ packages: $uninstall_list"
 echo "++ upgrading apm-packages"
 apm upgrade --no-confirm
 
-cd $( dirname $( realpath $0 ))
+cd $( cd "$( dirname "$0" )"; pwd )
 ls

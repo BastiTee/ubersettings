@@ -1,8 +1,10 @@
 #!/bin/bash
 
-cd $( dirname $( realpath $0 ))
+cd $( cd "$( dirname "$0" )"; pwd )
 rm -rf gen
 mkdir -p gen
+sudo mkdir -p /Library/Scripts/Basti
+sudo chmod 777 /Library/Scripts/Basti
 tools="\
 Finder \
 Google_Chrome \
@@ -18,9 +20,10 @@ Spotify \
 
 i=1
 for tool in $tools; do
+    echo "---"
   pad=$( printf "%02g" $i )
   i=$(( $i + 1 ))
-  trg=$( realpath "gen/Focus_${pad}_$( sed -e "s/ /_/g" \
+  trg=$( echo "gen/Focus_${pad}_$( sed -e "s/ /_/g" \
   <<< ${tool} ).applescript" )
   bn=$( basename $trg )
   tool_ws=$( sed -e "s/_/ /g" <<< $tool )

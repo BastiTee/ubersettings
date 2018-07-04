@@ -5,7 +5,7 @@ function link() {
     ln -vs "$1" "$2"
 }
 
-here="$( dirname $( realpath $0 ))"
+here="$( cd "$( dirname "$0" )"; pwd )"
 target=~/.atom
 mkdir -vp ${target}
 
