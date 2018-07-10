@@ -1,0 +1,11 @@
+{
+  "name": "solarized-white-syntax",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "description": "Solarized on a white background",
+  "repository": "https://github.com/emlai/solarized-white-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

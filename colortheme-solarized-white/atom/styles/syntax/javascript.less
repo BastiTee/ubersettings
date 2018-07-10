@@ -1,0 +1,42 @@
+.syntax--source.syntax--js {
+  .syntax--storage.syntax--type {
+    color: @syntax-color-keyword;
+  }
+
+  .syntax--entity.syntax--name.syntax--type {
+    color: @syntax-color-type;
+  }
+
+  .syntax--keyword:not(.syntax--operator),
+  .syntax--keyword.syntax--new {
+    color: @syntax-color-keyword;
+  }
+
+  .syntax--constant.syntax--other {
+    color: @syntax-color-variable;
+  }
+
+  .syntax--punctuation.syntax--terminator.syntax--statement {
+    color: @syntax-text-color;
+  }
+
+  .syntax--meta.syntax--delimiter.syntax--method.syntax--period {
+    color: @syntax-text-color;
+  }
+  .syntax--string.syntax--quoted.syntax--template {
+    .syntax--embedded.syntax--source {
+      color: @syntax-text-color;
+      & > .syntax--embedded.syntax--punctuation {
+        color: @red;
+      }
+    }
+  }
+  &.syntax--embedded .syntax--entity.syntax--name.syntax--tag {
+    color: @blue;
+  }
+}
+.syntax--source.syntax--js.syntax--jsx {
+  .syntax--entity.syntax--name.syntax--tag {
+    color: @blue;
+  }
+}

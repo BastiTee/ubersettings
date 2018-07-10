@@ -1,0 +1,42 @@
+.syntax--source.syntax--c,
+.syntax--source.syntax--cpp {
+  .syntax--meta.syntax--preprocessor {
+    color: @red;
+  }
+  .syntax--punctuation.syntax--string {
+    color: @syntax-color-string;
+  }
+  .syntax--storage {
+    color: @yellow;
+    &.syntax--modifier { // const
+      color: @syntax-color-keyword;
+    }
+  }
+  .syntax--entity.syntax--name.syntax--function.syntax--preprocessor {
+    color: @yellow;
+  }
+  .syntax--type {
+    color: @syntax-color-type;
+
+    &.syntax--posix-reserved {
+      color: @syntax-text-color;
+    }
+  }
+  .syntax--variable {
+    &.syntax--other.syntax--dot-access {
+      color: @syntax-text-color;
+    }
+    &.syntax--parameter.syntax--preprocessor {
+      color: @red;
+    }
+  }
+  .syntax--operator {
+    color: @syntax-color-keyword;
+  }
+  .syntax--keyword.syntax--control.syntax--directive.syntax--conditional {
+    color: @yellow;
+  }
+  .syntax--todo {
+    color: @green;
+  }
+}
