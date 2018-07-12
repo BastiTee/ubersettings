@@ -6,7 +6,7 @@
 	filemode = false
 	autocrlf = false
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/sebastiantschoepel/.gitignore
 
 [http]
 	sslverify = false
@@ -24,6 +24,3 @@
 	ci = commit
 	st = status -sb
 	br = branch
-[user]
-	name = Sebastian Tschöpel
-	email = sebastian.tschoepel@leanix.net
