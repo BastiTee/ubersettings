@@ -12,7 +12,7 @@ defscrollback 10000
 
 # Caption definition
 # <http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html>
-caption always "%S | %w | %H |"
+caption always "%H | %Lw"
 
 # Bind Alt+a Alt+d to toggle through windows (linux machines)
 # bindkey ^[a prev

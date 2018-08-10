@@ -132,7 +132,7 @@ elif [ "$dist" == "mac" ]; then
 fi
 sudo -H python3 -m pip install $PY_PACKAGES
 
-for tool in atom apm pip3; do
+for tool in atom apm; do
     [ -z $( command -v $tool ) ] && { echo "'$tool' not installed."; exit 1; }
 done
 
