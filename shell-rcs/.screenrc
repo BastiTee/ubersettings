@@ -27,4 +27,8 @@ bindkey ∂ next
 # ... mac machines (option+..)
 bindkey ‚ focus next
 
+# disable locking of screen
+bind ^x
+bind x
+
 # -- fin.
