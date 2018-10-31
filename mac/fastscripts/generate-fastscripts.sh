@@ -14,8 +14,8 @@ IntelliJ_IDEA_CE \
 Visual_Studio_Code \
 Microsoft_Outlook \
 Slack \
-Firefox \
-Spotify \
+Toggl \
+Jira \
 "
 
 i=1
