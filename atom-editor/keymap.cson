@@ -1,3 +1,5 @@
+'atom-workspace':
+  'alt--': 'unset!'
 'atom-workspace atom-text-editor':
     'cmd-left': 'last-cursor-position:previous'
     'cmd-right': 'last-cursor-position:next'
