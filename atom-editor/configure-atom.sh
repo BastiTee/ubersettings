@@ -74,8 +74,6 @@ atom-ide-ui \
 ide-typescript \
 `# Python language support` \
 ide-python \
-`# Java language support` \
-ide-java \
 `# Docker language support` \
 language-docker \
 `# ----- COLLABORATION FEATURES -----`
