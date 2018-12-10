@@ -3,6 +3,9 @@
     "workbench.startupEditor": "newUntitledFile",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "window.zoomLevel": 0,
-    "editor.fontFamily": "Roboto Mono",
-    "editor.fontSize": 14
+    "terminal.integrated.fontFamily": "Menlo",
+    "editor.fontFamily": "Menlo, Monaco, Menlo, 'Courier New'",
+    "editor.fontSize": 14,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false
 }

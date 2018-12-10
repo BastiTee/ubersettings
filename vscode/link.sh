@@ -13,5 +13,6 @@ mkdir -vp "${target}"
 
 # defaults
 link "${here}/settings${rd}.json" "${target}/settings.json"
+link "${here}/keybindings${rd}.json" "${target}/keybindings.json"
 
 ls -l "${target}"
