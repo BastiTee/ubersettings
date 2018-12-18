@@ -7,5 +7,10 @@
     "editor.fontFamily": "Menlo, Monaco, Menlo, 'Courier New'",
     "editor.fontSize": 14,
     "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "editor.rulers": [
+        80
+    ],
+    "editor.wordWrap": "wordWrapColumn"
+
 }
