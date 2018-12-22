@@ -1,0 +1,17 @@
+{
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "newUntitledFile",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 2,
+    "terminal.integrated.fontFamily": "Ubuntu Mono",
+    "terminal.integrated.fontSize": 15,
+    "editor.fontFamily": "Ubuntu Mono",
+    "editor.fontSize": 17,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.rulers": [
+        80
+    ],
+    "editor.wordWrap": "wordWrapColumn"
+
+}

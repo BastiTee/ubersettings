@@ -1,0 +1,31 @@
+{
+	"shebang": {
+		"prefix": "shebang",
+		"body": [
+			"#!/bin/bash",
+			""
+		],
+		"description": "Insert shebang line"
+	},
+	"here": {
+		"prefix": "here",
+		"body": [
+			"\"$( cd \"$( dirname \"\\$0\" )\"; pwd )\""
+		],
+		"description": "Obtain current script directory"
+	},
+	"cdhere": {
+		"prefix": "cdhere",
+		"body": [
+			"cd \"$( cd \"$( dirname \"\\$0\" )\"; pwd )\""
+		],
+		"description": "Change to current script directory"
+	},
+	"hrule": {
+		"prefix": "hrule",
+		"body": [
+			"# -----------------------------------------------------------------------------"
+		],
+		"description": "Insert horizontal rule"
+	}
+}
