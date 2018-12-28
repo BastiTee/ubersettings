@@ -12,6 +12,10 @@
     "editor.rulers": [
         80
     ],
-    "editor.wordWrap": "wordWrapColumn"
+    "editor.wordWrap": "wordWrapColumn",
+    "atomKeymap.promptV3Features": true,
+    "window.menuBarVisibility": "default",
+    "workbench.activityBar.visible": false,
+    "git.confirmSync": false
 
 }
