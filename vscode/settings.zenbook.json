@@ -1,21 +1,18 @@
 {
-    "workbench.colorTheme": "Default Light+",
-    "workbench.startupEditor": "newUntitledFile",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 2,
-    "terminal.integrated.fontFamily": "Ubuntu Mono",
-    "terminal.integrated.fontSize": 15,
+    "atomKeymap.promptV3Features": true,
     "editor.fontFamily": "Ubuntu Mono",
     "editor.fontSize": 17,
+    "editor.rulers": [80],
+    "editor.wordWrap": "wordWrapColumn",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "editor.rulers": [
-        80
-    ],
-    "editor.wordWrap": "wordWrapColumn",
-    "atomKeymap.promptV3Features": true,
+    "git.confirmSync": false,
+    "terminal.integrated.fontFamily": "Ubuntu Mono",
+    "terminal.integrated.fontSize": 15,
+    "typescript.updateImportsOnFileMove.enabled": "always",
     "window.menuBarVisibility": "default",
+    "window.zoomLevel": 2,
     "workbench.activityBar.visible": false,
-    "git.confirmSync": false
-
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "newUntitledFile"
 }

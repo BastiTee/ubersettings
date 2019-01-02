@@ -1,17 +1,18 @@
 {
-    "workbench.colorTheme": "Default Light+",
-    "workbench.startupEditor": "newUntitledFile",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 0,
-    "terminal.integrated.fontFamily": "Menlo",
-    "editor.fontFamily": "Menlo, Monaco, Menlo, 'Courier New'",
+    "atomKeymap.promptV3Features": true,
+    "editor.fontFamily": "Menlo",
     "editor.fontSize": 14,
+    "editor.rulers": [80],
+    "editor.wordWrap": "wordWrapColumn",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "editor.rulers": [
-        80
-    ],
-    "editor.wordWrap": "wordWrapColumn",
-    "git.confirmSync": false
-
+    "git.confirmSync": false,
+    "terminal.integrated.fontFamily": "Menlo",    
+    "terminal.integrated.fontSize": 12,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.menuBarVisibility": "default",
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "newUntitledFile"
 }
