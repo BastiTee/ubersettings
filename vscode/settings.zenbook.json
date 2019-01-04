@@ -18,5 +18,7 @@
     "workbench.sideBar.location": "left",
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "explorer.autoReveal": false,
+    "search.quickOpen.includeHistory": false
 }
