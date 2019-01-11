@@ -20,5 +20,6 @@
     "editor.renderControlCharacters": false,
     "breadcrumbs.enabled": true,
     "explorer.autoReveal": false,
-    "search.quickOpen.includeHistory": false
+    "search.quickOpen.includeHistory": false,
+    "workbench.statusBar.feedback.visible": false
 }
