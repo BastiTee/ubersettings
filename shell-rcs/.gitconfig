@@ -24,3 +24,6 @@
 	ci = commit
 	st = status -sb
 	br = branch
+
+[user]
+	useConfigOnly = true
