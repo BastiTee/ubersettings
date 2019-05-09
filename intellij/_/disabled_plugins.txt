@@ -1,3 +1,4 @@
 Coverage
 DevKit
+com.vladsch.idea.multimarkdown
 org.jetbrains.android
