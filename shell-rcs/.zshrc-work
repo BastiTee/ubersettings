@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Load rc-file used for both zsh and bash
+if [ -f ~/.commonrc ]; then source ~/.commonrc; fi
+# Load non-VC / proprietary rc-content
+if [ -f ~/.privaterc ]; then source ~/.privaterc; fi
+
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+export PYPE_CONFIGURATION_FILE="$( to_abspath ~/dev/leanix-pype/config.json )" # .pype-initfile-
+. ~/.pype-initfile-zsh

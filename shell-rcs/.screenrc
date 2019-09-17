@@ -1,5 +1,5 @@
 # Always force bash
-shell "/bin/bash"
+shell "/bin/zsh"
 
 # No startup message when starting screen
 startup_message off
