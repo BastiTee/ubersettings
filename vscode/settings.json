@@ -2,8 +2,9 @@
     "atomKeymap.promptV3Features": true,
     "editor.fontFamily": "Menlo",
     "editor.fontSize": 14,
-    "editor.rulers": [80],
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.rulers": [
+        80
+    ],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "git.confirmSync": false,
