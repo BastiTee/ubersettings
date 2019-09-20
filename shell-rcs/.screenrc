@@ -31,4 +31,7 @@ bindkey ‚ focus next
 bind ^x
 bind x
 
+# Set default name of tab
+shelltitle __
+
 # -- fin.
