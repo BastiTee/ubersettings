@@ -1,0 +1,147 @@
+# ==============================================================================
+# BASTI'S BASH DEFAULT SETTINGS
+# Commonly used bash settings on various machines.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# ==============================================================================
+
+# Determine shell
+ACTIVE_SHELL=$( echo $0 )
+
+# Determine distribution
+DIST=$( uname | tr "[:upper:]" "[:lower:]" )
+
+# If not running interactively, don't do anything
+if [[ "$-" != *i* ]]; then return; fi
+
+# Make sure this only gets sourced once
+if [[ -z ${USER_BASHRC} ]]; then USER_BASHRC="1"; else return; fi
+
+# BASIC BASH SETTINGS
+# ==============================================================================
+
+# Don't use ^D to exit
+set -o ignoreeof
+
+# Don't wait for job termination notification
+set -o notify
+
+# Make bash append rather than overwrite the history on disk
+if [ "$ACTIVE_SHELL" = "bash" ]; then shopt -s histappend; fi
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+[ "$ACTIVE_SHELL" = "bash" ] && shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Don"t put duplicate lines in the history.
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+
+# Ignore some controlling instructions
+# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
+# The "&" is a special pattern which suppresses duplicate entries.
+export HISTIGNORE=$"[ \t]*:&:[fb]g:exit"
+export HISTIGNORE=$"[ \t]*:&:[fb]g:exit:ls" # Ignore the ls command as well
+
+# Whenever displaying the prompt, write the previous line to disk
+export PROMPT_COMMAND="history -a"
+
+# See https://unix.stackexchange.com/a/72092
+stty -ixon
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ "$ACTIVE_SHELL" = "bash" ]; then
+    if ! shopt -oq posix; then
+        if [ -f /usr/share/bash-completion/bash_completion ]; then
+            . /usr/share/bash-completion/bash_completion
+        elif [ -f /etc/bash_completion ]; then
+            . /etc/bash_completion
+        fi
+    fi
+fi
+
+# One-tab completion
+[ "$ACTIVE_SHELL" = "bash" ] && bind 'set show-all-if-ambiguous on'
+[ "$ACTIVE_SHELL" = "bash" ] && bind 'set completion-ignore-case on'
+
+# COLORED PROMT
+# ===========================================================
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\
+:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+if [ "$TERM" = "linux" ]; then
+    /bin/echo -e "
+    \e]P0262524
+    \e]P1d78787
+    \e]P2afd787
+    \e]P3ffffaf
+    \e]P487afdf
+    \e]P5dfafdf
+    \e]P6afdfdf
+    \e]P7e2e4e6
+    \e]P881807f
+    \e]P9d78787
+    \e]PAafd787
+    \e]PBffffaf
+    \e]PC87afdf
+    \e]PDdfafdf
+    \e]PEafdfdf
+    \e]PFe2e4e6
+    "
+    # get rid of artifacts
+    clear
+fi
+
+# ALIAS SETTINGS
+# ===========================================================
+
+alias less="less -r" # raw control characters
+alias whence="type -a" # where, of a sort
+[ $DIST = "darwin" ] && alias ls="ls -hFG" || alias ls="ls -hF --color=tty"
+alias ll="ls -l" # long list
+alias l="ll"
+alias ..="cd .."
+alias ...="cd ../../"
+alias apt="apt-get"
+alias aptdate="sudo bash -c \"apt-get update && apt-get upgrade -y \
+&& apt-get autoremove --purge -y && apt-get autoclean -y\""
+alias vi="vim"
+
+# ENVIRONMENT
+# ===========================================================
+
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export VISUAL=vim
+export EDITOR=vim
