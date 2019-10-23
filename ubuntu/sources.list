@@ -12,7 +12,4 @@ deb http://security.ubuntu.com/ubuntu bionic-security main restricted universe m
 # User-level applications
 deb http://apt.insynchq.com/ubuntu artful non-free contrib
 deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.04/ /
-deb http://ppa.launchpad.net/peek-developers/stable/ubuntu bionic main
 deb [arch=amd64] https://updates.signal.org/desktop/apt artful main
-deb http://repository.spotify.com stable non-free
-
