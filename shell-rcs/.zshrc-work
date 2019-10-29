@@ -1,19 +1,41 @@
 #!/bin/zsh
 
 # Load rc-file used for both zsh and bash
-if [ -f ~/.commonrc ]; then source ~/.commonrc; fi
-# Load non-VC / proprietary rc-content
-if [ -f ~/.privaterc ]; then source ~/.privaterc; fi
+if [ -f ~/.bastis-shell-commons ]; then . ~/.bastis-shell-commons; fi
 
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-DISABLE_AUTO_TITLE="true"
+# Path configuration
+export PATH=${PATH}:\
+/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/bin
 
-plugins=(git)
+# Docker machine setup
+export DOCKER_IP=192.168.99.100
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/${USER}/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
 
-source $ZSH/oh-my-zsh.sh
+# Brew bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+export MARKDOWN_NOTEBOOK="$( to_abspath ~/nextcloud/Notebook/Private/Daily-Notes)"
+
+# Aliases
+alias pxn="px set notes"
+alias pxgc="px set git-commit"
+
+# # LeanIX frontend development
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+# Backup api-configs for px
+cp ~/.pype-leanix-api-config.json ~/Downloads/Archive/api-configs/$( date "+%s" )-api-config.json
 
 export PYPE_CONFIGURATION_FILE="$( to_abspath ~/dev/leanix-pype/config.json )" # .pype-initfile-
 . ~/.pype-initfile-zsh
+
+# Start here..
+cd ~/dev

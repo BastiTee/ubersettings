@@ -1,16 +1,9 @@
-. ~/.bastis-shell-commons
+#!/bin/zsh
 
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+# Load rc-file used for both zsh and bash
+if [ -f ~/.bastis-shell-commons ]; then . ~/.bastis-shell-commons; fi
 
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-DISABLE_AUTO_TITLE="true"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:~/.local/bin
 
-export PYPE_CONFIGURATION_FILE="/home/basti/.pype-config.json" # .pype-initfile-
+export PYPE_CONFIGURATION_FILE="$( to_abspath ~/.pype-config.json)" # .pype-initfile-
 . ~/.pype-initfile-zsh

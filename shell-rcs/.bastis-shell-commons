@@ -6,16 +6,13 @@
 # ==============================================================================
 
 # Determine shell
-ACTIVE_SHELL=$( echo $0 )
+ACTIVE_SHELL=$( ps |grep $$ |grep -v grep|awk '{print $4}' )
 
 # Determine distribution
 DIST=$( uname | tr "[:upper:]" "[:lower:]" )
 
 # If not running interactively, don't do anything
 if [[ "$-" != *i* ]]; then return; fi
-
-# Make sure this only gets sourced once
-if [[ -z ${USER_BASHRC} ]]; then USER_BASHRC="1"; else return; fi
 
 # BASIC BASH SETTINGS
 # ==============================================================================
@@ -71,65 +68,67 @@ fi
 # COLORED PROMT
 # ===========================================================
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
+if [ "$ACTIVE_SHELL" = "bash" ]; then
+    # set a fancy prompt (non-color, unless we know we "want" color)
+    case "$TERM" in
+        xterm-color|*-256color) color_prompt=yes;;
+    esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-force_color_prompt=yes
+    # uncomment for a colored prompt, if the terminal has the capability; turned
+    # off by default to not distract the user: the focus in a terminal window
+    # should be on the output of commands, not on the prompt
+    force_color_prompt=yes
 
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-        # We have color support; assume it's compliant with Ecma-48
-        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-        # a case would tend to support setf rather than setaf.)
-        color_prompt=yes
-    else
-        color_prompt=
+    if [ -n "$force_color_prompt" ]; then
+        if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+            # We have color support; assume it's compliant with Ecma-48
+            # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+            # a case would tend to support setf rather than setaf.)
+            color_prompt=yes
+        else
+            color_prompt=
+        fi
     fi
-fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\
-:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+    if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\
+    :\[\033[01;34m\]\w\[\033[00m\]\$ '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    fi
+    unset color_prompt force_color_prompt
 
-if [ "$TERM" = "linux" ]; then
-    /bin/echo -e "
-    \e]P0262524
-    \e]P1d78787
-    \e]P2afd787
-    \e]P3ffffaf
-    \e]P487afdf
-    \e]P5dfafdf
-    \e]P6afdfdf
-    \e]P7e2e4e6
-    \e]P881807f
-    \e]P9d78787
-    \e]PAafd787
-    \e]PBffffaf
-    \e]PC87afdf
-    \e]PDdfafdf
-    \e]PEafdfdf
-    \e]PFe2e4e6
-    "
-    # get rid of artifacts
-    clear
+    if [ "$TERM" = "linux" ]; then
+        /bin/echo -e "
+        \e]P0262524
+        \e]P1d78787
+        \e]P2afd787
+        \e]P3ffffaf
+        \e]P487afdf
+        \e]P5dfafdf
+        \e]P6afdfdf
+        \e]P7e2e4e6
+        \e]P881807f
+        \e]P9d78787
+        \e]PAafd787
+        \e]PBffffaf
+        \e]PC87afdf
+        \e]PDdfafdf
+        \e]PEafdfdf
+        \e]PFe2e4e6
+        "
+        # get rid of artifacts
+        clear
+    fi
 fi
 
 # ALIAS SETTINGS
 # ===========================================================
 
-alias less="less -r" # raw control characters
-alias whence="type -a" # where, of a sort
+alias less="less -r"
+alias whence="type -a"
 [ $DIST = "darwin" ] && alias ls="ls -hFG" || alias ls="ls -hF --color=tty"
-alias ll="ls -l" # long list
+alias ll="ls -l"
 alias l="ll"
 alias ..="cd .."
 alias ...="cd ../../"
@@ -145,3 +144,27 @@ export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
 export VISUAL=vim
 export EDITOR=vim
+
+# Load non-VC / proprietary rc-content
+if [ -f ~/.privaterc ]; then source ~/.privaterc; fi
+
+# HELPERS
+# ===========================================================
+
+# Helper method to resolve from ~ folders to abspath
+function to_abspath() {
+    echo $( cd $( dirname $1 ); pwd )/$( basename $1 )
+}
+
+# ZSH INIT
+# ===========================================================
+
+# Path to your oh-my-zsh installation.
+
+if [ "$ACTIVE_SHELL" = "zsh" ]; then
+    export ZSH=~/.oh-my-zsh
+    ZSH_THEME="robbyrussell"
+    DISABLE_AUTO_TITLE="true"
+    plugins=(git)
+    source $ZSH/oh-my-zsh.sh
+fi
