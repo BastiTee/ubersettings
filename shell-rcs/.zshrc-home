@@ -12,5 +12,5 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:~/.local/bin
 
-export PYPE_CONFIGURATION_FILE="/home/pi/.pype-config.json" # .pype-initfile-
+export PYPE_CONFIGURATION_FILE="/home/basti/.pype-config.json" # .pype-initfile-
 . ~/.pype-initfile-zsh
