@@ -36,6 +36,3 @@ cp ~/.pype-leanix-api-config.json ~/Downloads/Archive/api-configs/$( date "+%s" 
 
 export PYPE_CONFIGURATION_FILE="$( to_abspath ~/dev/leanix-pype/config.json )" # .pype-initfile-
 . ~/.pype-initfile-zsh
-
-# Start here..
-cd ~/dev
