@@ -5,5 +5,3 @@ if [ -f ~/.bastis-shell-commons ]; then . ~/.bastis-shell-commons; fi
 
 export PATH=$PATH:~/.local/bin
 
-export PYPE_CONFIGURATION_FILE="$( to_abspath ~/.pype-config.json)" # .pype-initfile-
-. ~/.pype-initfile-zsh
