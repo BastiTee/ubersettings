@@ -164,6 +164,7 @@ function to_abspath() {
 if [ "$ACTIVE_SHELL" = "zsh" ]; then
     export ZSH=~/.oh-my-zsh
     ZSH_THEME="robbyrussell"
+    unsetopt listambiguous # one tab completion
     DISABLE_AUTO_TITLE="true"
     plugins=(git)
     source $ZSH/oh-my-zsh.sh

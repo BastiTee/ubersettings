@@ -32,10 +32,7 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 # Backup api-configs for px
-cp ~/.pype-leanix-api-config.json ~/Downloads/Archive/api-configs/$( date "+%s" )-api-config.json
+cp ~/.pype-cli/leanix-api-config.json ~/Downloads/Archive/api-configs/$( date "+%s" )-api-config.json
 
-export PYPE_CONFIGURATION_FILE="$( to_abspath ~/dev/leanix-pype/config.json )" # .pype-initfile-
+export PYPE_CONFIGURATION_FILE="$( to_abspath ~/dev/leanix-pype/config.json)" # .pype-initfile-
 . ~/.pype-initfile-zsh
-
-# Start here..
-cd ~/dev
