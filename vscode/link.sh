@@ -20,7 +20,7 @@ link "${here}/settings${rd}.json" "${target}/settings.json"
 link "${here}/keybindings${rd}.json" "${target}/keybindings.json"
 
 for file in ${here}/snippets/*; do
-    link $file ${target}/snippets/$( basename $file )
+    link "$file" "${target}/snippets/$( basename $file )"
 done
 
 ls -l "${target}"
