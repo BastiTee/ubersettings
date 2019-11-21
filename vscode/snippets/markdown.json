@@ -1,4 +1,13 @@
 {
+	"md-shell": {
+		"prefix": "md-shell",
+		"body": [
+			"```shell",
+			"$1", 
+			"```\n"
+		],
+		"description": "Create a shell code snippet"
+	},
 	"jekyll-img": {
 		"prefix": "jekyll-img",
 		"body": [
