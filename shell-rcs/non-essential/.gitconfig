@@ -7,7 +7,6 @@
 	autocrlf = false
 	editor = vim
 	excludesfile = /Users/sebastiantschoepel/.gitignore
-	pager = 
 
 [http]
 	sslverify = false
