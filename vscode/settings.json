@@ -23,5 +23,8 @@
     "explorer.autoReveal": false,
     "search.quickOpen.includeHistory": false,
     "workbench.statusBar.feedback.visible": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
