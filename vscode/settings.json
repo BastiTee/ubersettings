@@ -12,7 +12,6 @@
     "terminal.integrated.fontSize": 12,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "window.menuBarVisibility": "default",
-    "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Default Light+",
     "workbench.startupEditor": "newUntitledFile",
@@ -23,5 +22,8 @@
     "explorer.autoReveal": false,
     "search.quickOpen.includeHistory": false,
     "workbench.statusBar.feedback.visible": false,
-    "editor.minimap.enabled": false
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.wordBasedSuggestions": false
+    }
 }
