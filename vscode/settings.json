@@ -22,8 +22,7 @@
     "explorer.autoReveal": false,
     "search.quickOpen.includeHistory": false,
     "workbench.statusBar.feedback.visible": false,
-    "python.languageServer": "Pylance",
-    "[python]": {
-        "editor.wordBasedSuggestions": false
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     }
 }
