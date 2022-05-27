@@ -1,28 +1,44 @@
 {
-    "atomKeymap.promptV3Features": true,
-    "editor.fontFamily": "Menlo",
-    "editor.fontSize": 14,
-    "editor.rulers": [
-        80
-    ],
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "git.confirmSync": false,
-    "terminal.integrated.fontFamily": "Menlo",    
-    "terminal.integrated.fontSize": 12,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "window.menuBarVisibility": "default",
-    "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Default Light+",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.sideBar.location": "left",
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": false,
-    "breadcrumbs.enabled": true,
-    "explorer.autoReveal": false,
-    "search.quickOpen.includeHistory": false,
-    "workbench.statusBar.feedback.visible": false,
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    }
+  "atomKeymap.promptV3Features": true,
+  "editor.fontFamily": "Menlo",
+  "editor.fontSize": 14,
+  "editor.rulers": [80],
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "terminal.integrated.fontFamily": "Menlo",
+  "terminal.integrated.fontSize": 12,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.menuBarVisibility": "default",
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Default Light+",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.sideBar.location": "left",
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "breadcrumbs.enabled": true,
+  "explorer.autoReveal": false,
+  "search.quickOpen.includeHistory": false,
+  "workbench.statusBar.feedback.visible": false,
+  "editor.minimap.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.languageServer": "Pylance",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "security.workspace.trust.untrustedFiles": "open",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  }
 }
