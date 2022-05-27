@@ -136,12 +136,14 @@ alias apt="apt-get"
 alias aptdate="sudo bash -c \"apt-get update && apt-get upgrade -y \
 && apt-get autoremove --purge -y && apt-get autoclean -y\""
 alias vi="vim"
+alias gs="git status"
+alias gd="git diff"
 
 # ENVIRONMENT
 # ===========================================================
 
-export LC_ALL=C.UTF-8
-export LANG=C.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export VISUAL=vim
 export EDITOR=vim
 
@@ -162,6 +164,7 @@ function to_abspath() {
 # Path to your oh-my-zsh installation.
 
 if [ "$ACTIVE_SHELL" = "zsh" ]; then
+    export ZSH_DISABLE_COMPFIX=true
     export ZSH=~/.oh-my-zsh
     ZSH_THEME="robbyrussell"
     unsetopt listambiguous # one tab completion
