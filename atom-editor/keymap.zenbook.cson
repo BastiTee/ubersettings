@@ -1,5 +1,0 @@
-# Fixes for package <last-cursor-position>
-'atom-workspace atom-text-editor':
-    'alt-left': 'last-cursor-position:previous'
-    'alt-right': 'last-cursor-position:next'
-    'alt-t': 'atom-ide-terminal:toggle-terminal-focus'

@@ -1,7 +1,0 @@
-'atom-workspace':
-  'alt--': 'unset!'
-'atom-workspace atom-text-editor':
-    'cmd-left': 'last-cursor-position:previous'
-    'cmd-right': 'last-cursor-position:next'
-    'cmd-#': 'editor:toggle-line-comments'
-    'alt-t': 'atom-ide-terminal:toggle-terminal-focus'
